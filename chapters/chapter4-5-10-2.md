@@ -2,19 +2,21 @@
 
 ```js
 /**
- * Получает значение параметра URL переданного методом GET.
+ * Получает значение свойства объекта переданного методом POST. Если запрос не содержит объект, атрибут возвращает ошибку.
  * @param {String} param   название параметра
- * @param {Any} default значение по умолчанию, возращаемое в случае отстутвия параметра. По умолчанию равен undefined. Необязательный аргумент.
- * @return {Any}
+ * @param {Any} default значение по умолчанию, возращаемое в случае отстутвия свойства. По умолчанию равен undefined. Необязательный аргумент.
+ * @return {Any, Error}
  */
-Request.QueryString.GetOptProperty(param, default);
+Request.Form.GetOptProperty(param, default);
 
 // Пример
-//Get paramemeters from Object: {mode:'home',code:345345,position:'boss'}
-mode = Request.Form.GetOptProperty("mode", "");
-//mode = 'home'
-code = Request.Form.GetOptProperty("code", "");
-//code = '345345'
-position = Request.Form.GetOptProperty("position", "");
-//position = 'boss'
+// Получаем свойства переданного объекта: {mode:'home',code:345345,position:'boss'}
+Request.Form.GetOptProperty("mode", "");
+// 'home'
+
+Request.Form.GetOptProperty("code", "");
+// '345345'
+
+Request.Form.GetOptProperty("position", "");
+// 'boss'
 ```
