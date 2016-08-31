@@ -38,7 +38,7 @@
            * [ArrayOptFirstElem()](chapters/chapter4-5-5-7.md)
        * [Работа с объектами](chapters/chapter4-5-10.md)
            * [HasProperty()](chapters/chapter4-5-10-1.md)
-       * [Работа с Регулярными выражениями](chapters/chapter4-7.md)
+       * [Работа с Регулярными выражениями](chapters/chapter4-5-12.md)
        * [Работа с документами XML](chapters/chapter4-5-8.md)
        * [Работа с базой данных](chapters/chapter4-5-7.md)
            * [XQuery](chapters/chapter4-4.md)
