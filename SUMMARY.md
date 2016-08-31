@@ -1,6 +1,5 @@
 # Summary
 
-* [Обложка](cover.md)
 * [Введение](README.md)
 * [Основы](chapters/chapter1-1.md)
    * [Структура директории](chapters/1-1.md)
