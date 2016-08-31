@@ -1,7 +1,7 @@
 # Summary
 
 * [Введение](README.md)
-* [Оглавление](contents.md)
+* [Оглавление](SUMMARY.md)
 * [Основы](chapters/chapter1-1.md)
    * [Структура директории](chapters/1-1.md)
    * Справочник каталогов
