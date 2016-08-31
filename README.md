@@ -8,7 +8,7 @@ _Лицензия:_ -
 
 **Сборка в GitBook: Юрков Максим**
 
-**Книга доступна по ссылке:** https://maksimyurkov.gitbooks.io/progressive-webtutor/content/cover.html
+**Книга доступна по ссылке:** https://maksimyurkov.gitbooks.io/progressive-webtutor/content/
 
 # Введение
 
