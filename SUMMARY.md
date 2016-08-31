@@ -73,7 +73,7 @@
            * [tools.start_agent()](chapters/chapter4-5-9-1.md)
            * [startMatrix()](chapters/chapter4-5-9-2.md)
    * [Костыли & Велосипеды](chapters/chapter4-6.md)
-   * [Регулярные выражения](chapters/chapter4-7.md)
+   * [Работа с Регулярными выражениями](chapters/chapter4-7.md)
 * [Webtutor Administrator](chapters/chapter6.md)
    * [Получить ID элемента](chapters/chapter6-1.md)
    * [Открыть элемент по ID](chapters/chapter6-2.md)
