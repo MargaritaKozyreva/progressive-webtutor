@@ -68,6 +68,7 @@
        * [Прочие функции](chapters/chapter4-5-9.md)
            * [tools.start_agent()](chapters/chapter4-5-9-1.md)
            * [startMatrix()](chapters/chapter4-5-9-2.md)
+       * Работа с HTTP запросами
    * [Костыли & Велосипеды](chapters/chapter4-6.md)
    * [Регулярные выражения](chapters/chapter4-7.md)
 * [Webtutor Administrator](chapters/chapter6.md)
