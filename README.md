@@ -2,13 +2,11 @@
 
 v1.0.0 
 
-**Автор: Юрков Максим**
+Автор: Юрков Максим
 
-_Лицензия:_ -
+Лицензия: -
 
-**Сборка в GitBook: Юрков Максим**
-
-**Книга доступна по ссылке:** https://maksimyurkov.gitbooks.io/progressive-webtutor/content/
+Книга доступна по ссылке: https://maksimyurkov.gitbooks.io/progressive-webtutor/content/
 
 # Введение
 
