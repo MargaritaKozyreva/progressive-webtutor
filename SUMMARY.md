@@ -54,7 +54,7 @@
                    * [isHierChild()](chapters/chapter4-4-2-9.md)
                * [SQL](chapters/chapter4-4-3.md)
        * [Работа с HTTP запросами](chapters/chapter4-5-11.md)
-           * Request.QueryString.GetOptProperty()
+           * [Request.QueryString.GetOptProperty()](chapters/chapter4-5-11-1.md)
        * [Работа с файловой системой](chapters/chapter4-5-6.md)
            * [PutFileData()](chapters/chapter4-5-6-1.md)
            * [LoadFileData()](chapters/chapter4-5-6-2.md)
