@@ -2,35 +2,12 @@
 
 Советы, которые помогут не наступить на грабли.
 
-* Не изменяйте системные файлы и шаблоны WebTutor. Вносите свои изменения в систему путем добавления своих файлов и шаблонов.
 
 ---
 
-WebTutor приходится переодически обновлять и патчить. Когда вы изменяете системные файлы, то при обновлении все ваши изменения теряются. С шаблон
 
-* Do not change the basic system files and templates Webtutor. Try modifying the system by adding your files. Copy the existing elements of the system and make changes in the copy of elements.
+**Не изменяйте системные файлы и шаблоны WebTutor. Вносите свои изменения в систему путем добавления своих файлов и шаблонов.**
 
-* If possible, try not use server-side Javascript. Try use Webtutor as the database server, get data in JSON/XML format and calmly work with received information on the client side.
+WebTutor приходится переодически обновлять и патчить. Когда вы изменяете системные файлы, то при обновлении все ваши изменения теряются. С шаблонами просходит все наоборот, если вы их изменили, то при обновлении WebTutor они обновляться не будут. В итоге если вы вносите измения путем правки системных составляющих, то после обновления вас ждет "безудержное веселье". Если же вы вносите свои изменения путем добавления, то после обновления системы поиск и анализ ошибок в неработающем функционале обычно не вызывает проблем.
 
-* When you make a POST request to the WebTutor server, use standard JavaScript object in the body of the request. (content-type="application/x-www-form-urlencoded")
-
-* Responses from the Webtutor server do in JSON or XML format.
-
-**Example:**
-
-```js
-<%
-//Create object
-obj = {};
-
-//Fill object
-obj.param = true;
-obj.array = XQuery("for $elem in groups return $elem");
-
-//Convert to JSON or XML
-json_string = tools.array_to_text(obj, 'json');
-%>
-
-//Display server response
-<%=json_string%>
-```
+---
