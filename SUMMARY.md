@@ -80,6 +80,6 @@
    * [Режим просмотра каталога](chapters/chapter6-3.md)
    * [Создать копию элемента](chapters/chapter6-4.md)
 * [Полезные ссылки](chapters/chapter7.md)
-* [Отладка](chapters/chapter8.md)
 * [Советы](chapters/chapter9.md)
+* [Отладка](chapters/chapter8.md)
 
