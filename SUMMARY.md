@@ -81,5 +81,5 @@
    * [Создать копию элемента](chapters/chapter6-4.md)
 * [Полезные ссылки](chapters/chapter7.md)
 * [Отладка](отладка.md)
-* [Правила](chapters/chapter9.md)
+* [Советы](chapters/chapter9.md)
 
