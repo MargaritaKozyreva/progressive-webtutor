@@ -4,7 +4,7 @@
 
 Версия: 1.0.0 
 
-Автор: Юрков Максим
+Автор: [Юрков Максим](https://github.com/maksimyurkov)
 
 Лицензия: Apache License 2.0
 
