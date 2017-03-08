@@ -142,7 +142,17 @@
 
     * [Прочие функции](/Code/Functions/Other Functions/README.md)
 
+* [Костыли и велосипеды](/Crutches & Bicycles/README.md)
 
+* [Советы](/Advice/README.md)
+
+* [Отладка](/Debugging/README.md)
+
+* [Webtutor Administrator](/Webtutor Administrator/README.md)
+
+* [Полезные ссылки](/Useful links/README.md)
+
+й
 
 
 
