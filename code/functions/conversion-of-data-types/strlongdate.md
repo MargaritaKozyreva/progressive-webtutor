@@ -1,4 +1,4 @@
-# StrLongDate()
+# StrLongDate\(\)
 
 ```js
 /**
@@ -12,3 +12,6 @@ function StrLongDate(date) {...}
 StrLongDate(Date('06.10.2009 11:44:37'));
 // '6 октября 2009 г.'; 
 ```
+
+
+

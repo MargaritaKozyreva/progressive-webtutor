@@ -1,4 +1,4 @@
-# StrSignedInt()
+# StrSignedInt\(\)
 
 ```js
 /**
@@ -12,3 +12,6 @@ function StrSignedInt(arg) {...}
 StrSignedInt(0-5423);
 // -5423
 ```
+
+
+

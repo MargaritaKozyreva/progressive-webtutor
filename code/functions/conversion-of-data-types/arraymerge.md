@@ -1,4 +1,4 @@
-# ArrayMerge()
+# ArrayMerge\(\)
 
 ```js
 /**
@@ -14,3 +14,6 @@ function ArrayMerge(array, elemExpr, delim) {...}
 ArrayMerge(groupDoc.TopElem.collaborators, "This.person_fullname", ",");
 // "Васильева Людмила Петровна,Жирова Антонина Васильевна,Иванов Иван Иванович" 
 ```
+
+
+
