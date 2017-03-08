@@ -6,7 +6,7 @@
   * [Структура директории](chapters/1-1.md)
   * [Справочник каталогов](chapters/spravochnik-katalogov.md)
 * [Варианты разработки](варианты-разработки.md)
-  * Используя вэбкомпоненты
+  * [Используя вэбкомпоненты](варианты-разработки/ispolzuya-vebkomponenty.md)
 * [Webtutor Administrator](chapters/chapter6.md)
   * [Получить ID элемента](chapters/chapter6-1.md)
   * [Открыть элемент по ID](chapters/chapter6-2.md)

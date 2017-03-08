@@ -21,11 +21,5 @@
 | [StrSignedInt\(\)](https://maksimyurkov.gitbooks.io/progressive-webtutor/content/chapters/chapter4-5-1-7.html) | Преобразует целое положительное число в отрицательное. | Встроенная |
 | [Real\(\)](https://maksimyurkov.gitbooks.io/progressive-webtutor/content/chapters/chapter4-5-1-8.html) | Преобразует значение аргумента к вещественному числу. | Встроенная |
 
-### Преобразование в дату \(Date\) {#преобразование-в-дату-date}
-
-| Название | Описание | Тип |
-| :--- | :--- | :--- |
-|  |  |  |
-
 
 

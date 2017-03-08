@@ -1,3 +1,0 @@
-# Основы
-
-NOTE: The code presented in this section is processed on the server-side Webtutor. The code is based on the outdated and modified version of the Javascript. Using this code, you can do a lot of complex and useful things, but for productive development i recommend to use this code only for the formation and provide the necessary data from the server (in the format JSON/XML) and their further processing on the client side using the modern development technologies.
