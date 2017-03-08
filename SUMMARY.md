@@ -24,7 +24,7 @@
 
     * [Преобразование типов данных](/Code/Functions/Conversion of data types/README.md)
 
-      * [ArrayMerge\(\)](/Code/Functions/Conversion of data types/ArrayMerge\(\).md)
+      * [ArrayMerge\(\)](//Code/Functions/Conversion of data types/ArrayMerge\(\).md)
 
       * [Int\(\)](/Code/Functions/Conversion of data types/Int\(\).md)
 
@@ -153,6 +153,4 @@
 * [Полезные ссылки](/Useful links/README.md)
 
 й
-
-
 
