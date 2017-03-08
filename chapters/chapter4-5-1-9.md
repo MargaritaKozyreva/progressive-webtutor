@@ -1,4 +1,4 @@
-# StrDate()
+# StrDate\(\)
 
 ```js
 /**
@@ -14,3 +14,6 @@ function StrDate(date, ShowTime, ShowSeconds) {...}
 StrDate(Date(), true, true);
 // '29.08.2016 20:28:08'; 
 ```
+
+
+
