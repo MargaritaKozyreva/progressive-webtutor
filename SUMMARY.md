@@ -27,6 +27,8 @@
     * [Преобразование форматов и кодировок](/Code/Functions/Convert formats and encodings/README.md)
       * [EncodeCharset\(\)](/Code/Functions/Convert formats and encodings/EncodeCharset\(\).md)
       * [StrDate\(\)](/Code/Functions/Convert formats and encodings/StrDate\(\).md)
+    * [Работа со строками](/Code/Functions/Work with strings/README.md)
+      * [StrReplace\(\)](/Code/Functions/Work with strings/StrReplace\(\).md)
 
 
 
