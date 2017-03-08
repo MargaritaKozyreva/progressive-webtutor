@@ -1,7 +1,5 @@
 # Summary
 
 * [Введение](README.md)
-* [Основы](/Basics)
-
-
+* [Основы](Basics/README.md)
 
