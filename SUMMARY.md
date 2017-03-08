@@ -1,34 +1,148 @@
-# Содержание
+Содержание
 
 * Введение
+
 * [Оглавление](chapters/contents.md)
+
 * [Основы](/Basics/README.md)
+
   * [Структура директории](chapters/1-1.md)
+
   * Справочник каталогов
+
 * [Варианты разработки](варианты-разработки.md)
+
   * Используя вэбкомпоненты
+
 * [Код](/Code/README.md)
 
   * [Синтаксис](/Code/Syntax/README.md)
+
   * [Глобальные переменные](/Code/Global variables/README.md)
+
   * [Функции](/Code/Functions/README.md)
 
     * [Преобразование типов данных](/Code/Functions/Conversion of data types/README.md)
+
       * [ArrayMerge\(\)](/Code/Functions/Conversion of data types/ArrayMerge\(\).md)
+
       * [Int\(\)](/Code/Functions/Conversion of data types/Int\(\).md)
+
       * [Real\(\)](/Code/Functions/Conversion of data types/Real\(\).md)
+
       * [String\(\)](/Code/Functions/Conversion of data types/String\(\).md)
+
       * [StrInt\(\)](/Code/Functions/Conversion of data types/StrInt\(\).md)
+
       * [StrLongDate\(\)](/Code/Functions/Conversion of data types/StrLongDate\(\).md)
+
       * [StrReal\(\)](/Code/Functions/Conversion of data types/StrReal\(\).md)
-      * [StrRealFixed\(\)](/Code/Functions/Conversion of data types/StrRealFixed\(\).md)
+
+      * [StrRealFixed\(\)](/Code/Functions/Conversion of data types/StrRealFixed\(\).md)[Code/Functions/Working with database/XQuery/Functions/null\(\).md](/Code/Functions/Working with database/XQuery/Functions/null\(\).md)
+
       * [StrSignedInt\(\)](/Code/Functions/Conversion of data types/StrSignedInt\(\).md)
+
       * [TextInt\(\)](/Code/Functions/Conversion of data types/TextInt\(\).md)
+
     * [Преобразование форматов и кодировок](/Code/Functions/Convert formats and encodings/README.md)
+
       * [EncodeCharset\(\)](/Code/Functions/Convert formats and encodings/EncodeCharset\(\).md)
+
       * [StrDate\(\)](/Code/Functions/Convert formats and encodings/StrDate\(\).md)
+
     * [Работа со строками](/Code/Functions/Work with strings/README.md)
+
       * [StrReplace\(\)](/Code/Functions/Work with strings/StrReplace\(\).md)
+
+    * [Работа с датами](/Code/Functions/Work with dates/README.md)
+
+    * [Работа с массивами](/Code/Functions/Work with arrays/README.md)
+
+      * [ArrayCount\(\)](/Code/Functions/Work with arrays/ArrayCount\(\).md)
+
+      * [ArrayExtract\(\)](/Code/Functions/Work with arrays/ArrayExtract\(\).md)
+
+      * [ArrayFind\(\)](/Code/Functions/Work with arrays/ArrayFind\(\).md)
+
+      * [ArrayOptFirstElem\(\)](/Code/Functions/Work with arrays/ArrayOptFirstElem\(\).md)
+
+      * [ArraySelect\(\)](/Code/Functions/Work with arrays/ArraySelect\(\).md)
+
+      * [ArraySelectDistinct\(\)](/Code/Functions/Work with arrays/ArraySelectDistinct\(\).md)
+
+      * [ArrayUnion\(\)](/Code/Functions/Work with arrays/ArrayUnion\(\).md)
+
+    * [Работа с объектами](/Code/Functions/Work with objects/README.md)
+
+      * [HasProperty\(\)](/Code/Functions/Work with objects/HasProperty\(\).md)
+
+    * [Работа с регулярными выражениями](/Code/Functions/Working with regular expressions/README.md)
+
+    * [Работа с документами XML](/Code/Functions/Working with xml documents/README.md)
+
+    * [Работа с базой данных](/Code/Functions/Working with database/README.md)
+
+      * [XQuery](/Code/Functions/Working with database/XQuery/README.md)
+
+        * [Syntax](/Code/Functions/Working with database/XQuery/Syntax/README.md)
+
+        * [Functions](/Code/Functions/Working with database/XQuery/Functions/README.md)
+
+          * [catalogHierSubset\(\)](/Code/Functions/Working with database/XQuery/Functions/catalogHierSubset\(\).md)
+
+          * [contains\(\)](/Code/Functions/Working with database/XQuery/Functions/contains\(\).md)
+
+          * [date\(\)](/Code/Functions/Working with database/XQuery/Functions/date\(\).md)
+
+          * [doc-contains\(\)](/Code/Functions/Working with database/XQuery/Functions/doc-contains\(\).md)
+
+          * [false\(\)](/Code/Functions/Working with database/XQuery/Functions/false\(\).md)
+
+          * [isHierChild\(\)](/Code/Functions/Working with database/XQuery/Functions/isHierChild\(\).md)
+
+          * [null\(\)](/Code/Functions/Working with database/XQuery/Functions/null\(\).md)
+
+          * [true\(\)](/Code/Functions/Working with database/XQuery/Functions/true\(\).md)
+
+          * [MatchSome\(\)](/Code/Functions/Working with database/XQuery/Functions/МatchSome\(\).md)
+
+        * [SQL](/Code/Functions/Working with database/XQuery/SQL/README.md)
+
+    * [Работа с HTTP запросами](/Code/Functions/Working with http requests/README.md)
+
+      * [Request.QueryString.GetOptProperty\(\)](/Code/Functions/Working with http requests/Request.QueryString.GetOptProperty\(\).md)
+
+      * [Request.QueryString.GetOptProperty\(\)](/Code/Functions/Working with http requests/Request.QueryString.GetOptProperty\(\).md)
+
+      * [requestJsonToObj\(\)](/Code/Functions/Working with http requests/requestJsonToObj\(\).md)
+
+    * [Работа с файловой системой](/Code/Functions/Working with the file system/README.md)
+
+      * [copyFile\(\)](/Code/Functions/Working with the file system/copyFile\(\).md)
+
+      * [DeleteFile\(\)](/Code/Functions/Working with the file system/DeleteFile\(\).md)
+
+      * [FilePathExist\(\)](/Code/Functions/Working with the file system/FilePathExists\(\).md)
+
+      * [getJsonFromServer\(\)](/Code/Functions/Working with the file system/getJsonFromServer\(\).md)
+
+      * [IsDirectory\(\)](/Code/Functions/Working with the file system/IsDirectory\(\).md)
+
+      * [LoadFileData\(\)](/Code/Functions/Working with the file system/LoadFileData\(\).md)
+
+      * [ObtainDirectory\(\)](/Code/Functions/Working with the file system/ObtainDirectory\(\).md)
+
+      * [PutFileData\(\)](/Code/Functions/Working with the file system/PutFileData\(\).md)
+
+      * [ReadDirectory\(\)](/Code/Functions/Working with the file system/ReadDirectory\(\).md)
+
+      * [UrlToFilePath\(\)](/Code/Functions/Working with the file system/UrlToFilePath\(\).md)
+
+      * [ZipExtract\(\)](/Code/Functions/Working with the file system/ZipExtract\(\).md)
+
+    * [Прочие функции](/Code/Functions/Other Functions/README.md)
+
+
 
 
 
