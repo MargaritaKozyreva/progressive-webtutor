@@ -116,6 +116,8 @@
 
       * [requestJsonToObj\(\)](/Code/Functions/Working with http requests/requestJsonToObj\(\).md)
 
+      * [HttpRequest\(\)](/Code/Functions/Working with http requests/HttpRequest\(\).md)
+
     * [Работа с файловой системой](/Code/Functions/Working with the file system/README.md)
 
       * [copyFile\(\)](/Code/Functions/Working with the file system/copyFile\(\).md)
@@ -152,5 +154,5 @@
 
 * [Полезные ссылки](/Useful links/README.md)
 
-й
+
 
