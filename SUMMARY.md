@@ -13,7 +13,7 @@
   * [Глобальные переменные](/Code/Global variables/README.md)
   * [Функции](/Code/Functions/README.md)
     * [Преобразование типов данных](/Code/Functions/Conversion of data types/README.md)
-      * [ArrayMerge](/Code/Functions/Conversion of data types/ArrayMerge%28%29.md)
+      * [ArrayMerge](/Code/Functions/Conversion of data types/ArrayMerge.md)
       * [Int\(\)](/Code/Functions/Conversion of data types/Int%28%29.md)
       * [Real\(\)](/Code/Functions/Conversion of data types/Real%28%29.md)
       * [String\(\)](/Code/Functions/Conversion of data types/String%28%29.md)
@@ -78,4 +78,6 @@
 * [Отладка](/Debugging/README.md)
 * [Webtutor Administrator](/Webtutor Administrator/README.md)
 * [Полезные ссылки](/Useful links/README.md)
+
+
 
