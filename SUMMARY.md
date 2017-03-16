@@ -3,9 +3,9 @@
 * [Introduction](README.md)
 * Введение
 * [Оглавление](chapters/contents.md)
-* [Основы](/Basics/README.md)
-  * [Структура директории](chapters/1-1.md)
-  * Справочник каталогов
+* [Основы](/Basic Information/README.md)
+  * [О Webtutor](/Basic Information/About Webtutor.md)
+* * [Структура директории](/Basic Information/Directory structure.md)
 * [Варианты разработки](варианты-разработки.md)
   * Используя вэбкомпоненты
 * [Код](/Code/README.md)
