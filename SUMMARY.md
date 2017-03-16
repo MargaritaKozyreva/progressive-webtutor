@@ -1,13 +1,10 @@
 # Содержание
 
-* [Introduction](README.md)
-* Введение
-* [Оглавление](chapters/contents.md)
+* [Оглавление](/README.md)
 * [Основы](/Basic Information/README.md)
   * [О Webtutor](/Basic Information/About Webtutor.md)
 * * [Структура директории](/Basic Information/Directory structure.md)
-* [Варианты разработки](варианты-разработки.md)
-  * Используя вэбкомпоненты
+* [Варианты разработки](/Development Options/README.md)
 * [Код](/Code/README.md)
   * [Синтаксис](/Code/Syntax/README.md)
   * [Глобальные переменные](/Code/Global variables/README.md)
@@ -73,7 +70,7 @@
       * [UrlToFilePath](/Code/Functions/Working with the file system/UrlToFilePath.md)
       * [ZipExtract](/Code/Functions/Working with the file system/ZipExtract.md)
     * [Прочие функции](/Code/Functions/Other Functions/README.md)
-* [Костыли и велосипеды](/Crutches & Bicycles/README.md)
+* [Костыли и велосипеды](/Crutches and Bicycles/README.md)
 * [Советы](/Advice/README.md)
 * [Отладка](/Debugging/README.md)
 * [Webtutor Administrator](/Webtutor Administrator/README.md)

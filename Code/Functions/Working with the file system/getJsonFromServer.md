@@ -1,4 +1,4 @@
-# getJsonFromServer()
+# getJsonFromServer\(\)
 
 ```js
 /**
@@ -13,6 +13,7 @@ function getJsonFromServer(url) {
 
 **Внимание**
 
-Если возникают проблемы при преобразовании, появляются лишние символы(кавычки, разрывы строк итд), то попробуйте сохранить json файл "Without BOM".
+Если возникают проблемы при преобразовании, появляются лишние символы\(кавычки, разрывы строк итд\), то попробуйте сохранить json файл "Without BOM".
 
-![](/img/4-5-6-3.jpg)
+![](/Code/Functions/Working with the file system/getJsonFromServer.jpg)
+
