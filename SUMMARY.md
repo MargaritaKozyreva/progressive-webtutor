@@ -74,5 +74,7 @@
 * [Отладка](/Debugging/README.md)
 * [Webtutor Administrator](/Webtutor Administrator/README.md)
 * [Полезные ссылки](/Useful links/README.md)
-* [Содействие](sodeistvie.md)
+* [Содействие](CONTRIBUTING.md)
+
+
 
