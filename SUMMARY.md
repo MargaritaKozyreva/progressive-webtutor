@@ -37,7 +37,7 @@
       * [ArraySelectDistinct](Code/Functions/WorkWithArrays/ArraySelectDistinct.md)
       * [ArrayUnion](Code/Functions/WorkWithArrays/ArrayUnion.md)
     * [Работа с объектами](Code/Functions/WorkWithObjects/README.md)
-      * [HasProperty](/Code/Functions/Work with objects/HasProperty.md)
+      * [HasProperty](Code/Functions/WorkWithObjects/HasProperty.md)
     * [Работа с регулярными выражениями](Code/Functions/WorkingWithRegularExpressions/README.md)
     * [Работа с документами XML](Code/Functions/WorkingWithXmlDocuments/README.md)
     * [Работа с базой данных](Code/Functions/WorkingWithDatabase/README.md)
