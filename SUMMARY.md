@@ -1,9 +1,8 @@
-# Содержание
+# Summary
 
 * [Оглавление](/README.md)
 * [Основы](/Basic Information/README.md)
   * [О Webtutor](/Basic Information/About Webtutor.md)
-* * [Структура директории](/Basic Information/Directory structure.md)
 * [Варианты разработки](/Development Options/README.md)
 * [Код](/Code/README.md)
   * [Синтаксис](/Code/Syntax/README.md)
@@ -75,6 +74,5 @@
 * [Отладка](/Debugging/README.md)
 * [Webtutor Administrator](/Webtutor Administrator/README.md)
 * [Полезные ссылки](/Useful links/README.md)
-
-
+* [Содействие](sodeistvie.md)
 
