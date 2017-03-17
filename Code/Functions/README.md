@@ -6,18 +6,18 @@
 
 | Раздел | Описание |
 | --- | --- |
-| [Преобразование типов данных](//Code/Functions/Conversion of data types/README.md) | Функции преобразования различных типов данных. |
-| [Преобразование форматов и кодировок](//Code/Functions/Convert formats and encodings/README.md) | Функции преобразования различных форматов и кодировок. |
-| [Работа со строками](//Code/Functions/Work with strings/README.md) | Функции для работы со строками. |
-| [Работа с датами](//Code/Functions/Work with dates/README.md) | Функции для работы с датами. |
-| [Работа с массивами](//Code/Functions/Work with arrays/README.md) | Функции для работы с массивами. |
-| [Работа с объектами](//Code/Functions/Work with objects/README.md) | Функции для работы с объектами. |
-| [Работа с регулярными выражениями](//Code/Functions/Working with regular expressions/README.md) | Функции для работы с регулярными выражениями. |
-| [Работа с документами XML](//Code/Functions/Working with xml documents/README.md) | Функции для работы с документами XML. |
-| [Работа с базой данных](//Code/Functions/Working with database/README.md) | Функции для работы с базой данных. |
-| [Работа с HTTP запросами](//Code/Functions/Working with http requests/README.md) | Функции для работы с HTTP запросами. |
-| [Работа с файловой системой](//Code/Functions/Working with the file system/README.md) | Функции для работы с файловой системой. |
-| [Прочие функции](//Code/Functions/Other Functions/README.md) | Прочие функции, которые не входят в другие категории. |
+| [Преобразование типов данных](/Code/Functions/ConversionOfDataTypes/README.md) | Функции преобразования различных типов данных. |
+| [Преобразование форматов и кодировок](//Code/Functions/ConvertFormatsAndEncodings/README.md ) | Функции преобразования различных форматов и кодировок. |
+| [Работа со строками](/Code/Functions/WorkWithStrings/README.md) | Функции для работы со строками. |
+| [Работа с датами](/Code/Functions/WorkWithDates/README.md) | Функции для работы с датами. |
+| [Работа с массивами](/Code/Functions/WorkWithArrays/README.md) | Функции для работы с массивами. |
+| [Работа с объектами](/Code/Functions/WorkWithObjects/README.md) | Функции для работы с объектами. |
+| [Работа с регулярными выражениями](/Code/Functions/WorkingWithRegularExpressions/README.md) | Функции для работы с регулярными выражениями. |
+| [Работа с документами XML](/Code/Functions/WorkingWithXmlDocuments/README.md) | Функции для работы с документами XML. |
+| [Работа с базой данных](/Code/Functions/WorkingWithDatabase/README.md) | Функции для работы с базой данных. |
+| [Работа с HTTP запросами](/Code/Functions/WorkingWithHttpRequests/README.md) | Функции для работы с HTTP запросами. |
+| [Работа с файловой системой](/Code/Functions/WorkingWithTheFileSystem/README.md) | Функции для работы с файловой системой. |
+| [Прочие функции](/Code/Functions/OtherFunctions/README.md) | Прочие функции, которые не входят в другие категории. |
 
 
 
