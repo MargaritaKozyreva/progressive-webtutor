@@ -1,4 +1,4 @@
-# О Webtutor
+# О системе WebTutor
 
 
 

@@ -1,11 +1,14 @@
-#Структура директории
+# Структура директории
 
 | Директория | Описание |
-| -- | -- |
-| `WebTutorServer\wtv\wt\web\` | Публичная директория с файлами портала |
-| `WebTutorServer\wtv\wt\web\include\*` | Файлы данной директории включаются почти во все страницы портала. Отвечают за авторизацию, права доступа и прочую инициализацию, а также содержание `<head>` элемента. |
-| `WebTutorServer\wtv\wt\web\webtutor` | Опубликованные курсы и тесты |
-| `WebTutorServer\wtv\wtv_<object_name>s.xmd` | Шаблоны используемых объектов в каталогах |
-| `WebTutorServer\wtv\wt\web\scripts\` | Различные скрипты и стили использующиеся в системе. (Ext JS, Jquery итд) |
-| `WebTutorServer\xHttp.ini` | Различные настройки сервера Webtutor (название базы данных по умолчанию, кодировки, порты итп) |
-| `WebTutorAdmin\` | Различные скрипты и стили использующиеся в системе. (Ext JS, Jquery итд) |
+| --- | --- |
+| `WebTutorServer\wtv\wt\web\` | Публичная директория с файлами портала \(доступна извне\) |
+| `WebTutorServer\wtv\wt\web\include\*` | Файлы данной директории отвечают за авторизацию, права доступа, а также содержание `<head>`элемента DOM. |
+| `WebTutorServer\wtv\wt\web\webtutor` | Курсы и тесты |
+| `WebTutorServer\wtv\wtv_<object_name>s.xmd` | Шаблоны объектов используемых в каталогах |
+| `WebTutorServer\wtv\wt\web\scripts\` | Скрипты и стили \([Ext JS](https://www.sencha.com/products/extjs/), Jquery и.т.д.\) |
+| `WebTutorServer\xHttp.ini` | Настройки сервера WebTutor \(название базы данных по умолчанию, кодировки, порты и.т.д.\) |
+| `WebTutorAdmin\` |  |
+
+
+
