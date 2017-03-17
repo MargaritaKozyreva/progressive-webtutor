@@ -76,5 +76,3 @@
 * [Полезные ссылки](/Useful links/README.md)
 * [Содействие](CONTRIBUTING.md)
 
-
-
