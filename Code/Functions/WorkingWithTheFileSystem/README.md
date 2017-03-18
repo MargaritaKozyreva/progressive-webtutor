@@ -7,6 +7,7 @@
 | [getJsonFromServer\(\)](/Code/Functions/WorkingWithTheFileSystem/getJsonFromServer.md) | Получает содержимое json файл и преобразовывает его в объект. | Пользовательская |
 | [DeleteFile\(\)](/Code/Functions/WorkingWithTheFileSystem/DeleteFile.md) | Удаляет файл. | Встроенная |
 | [copyFile\(\)](/Code/Functions/WorkingWithTheFileSystem/copyFile.md) | Копирует файл. | Пользовательская |
+| [MoveFile\(\)](/Code/Functions/WorkingWithTheFileSystem/MoveFile.md) | Перемещает или переименовывает файл. | Встроенная |
 | [ObtainDirectory\(\)](/Code/Functions/WorkingWithTheFileSystem/ObtainDirectory.md) | Проверяет, существует ли указанная директория, если нет - создает ее. | Встроенная |
 | [ReadDirectory\(\)](/Code/Functions/WorkingWithTheFileSystem/ReadDirectory.md) | Возвращает массив, содержащий список файлов и вложенных директорий внутри указанной директории. | Встроенная |
 | [IsDirectory\(\)](/Code/Functions/WorkingWithTheFileSystem/IsDirectory.md) | Проверяет, является ли указанный путь директорией. | Встроенная |

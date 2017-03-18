@@ -71,6 +71,7 @@
       * [ReadDirectory](Code/Functions/WorkingWithTheFileSystem/ReadDirectory.md)
       * [UrlToFilePath](Code/Functions/WorkingWithTheFileSystem/UrlToFilePath.md)
       * [ZipExtract](Code/Functions/WorkingWithTheFileSystem/ZipExtract.md)
+      * [MoveFile](Code/Functions/WorkingWithTheFileSystem/MoveFile.md)
     * [Прочие функции](Code/Functions/OtherFunctions/README.md)
       * [startMatrix](Code/Functions/OtherFunctions/startMatrix.md)
       * [tools.start\_agent](Code/Functions/OtherFunctions/tools.start_agent.md)
