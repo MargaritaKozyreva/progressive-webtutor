@@ -15,5 +15,5 @@ function getJsonFromServer(url) {
 
 Если возникают проблемы при преобразовании, появляются лишние символы\(кавычки, разрывы строк итд\), то попробуйте сохранить json файл "Without BOM".
 
-![](/Code/Functions/Working with the file system/getJsonFromServer.jpg)
+![](/Code/Functions/WorkingWithTheFileSystem/getJsonFromServer.jpg)
 
