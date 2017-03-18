@@ -17,6 +17,7 @@
 | [Работа с базой данных](/Code/Functions/WorkingWithDatabase/README.md) | Функции для работы с базой данных. |
 | [Работа с HTTP запросами](/Code/Functions/WorkingWithHttpRequests/README.md) | Функции для работы с HTTP запросами. |
 | [Работа с файловой системой](/Code/Functions/WorkingWithTheFileSystem/README.md) | Функции для работы с файловой системой. |
+| [Выполнение кода](/Code/Functions/CodeExecution/README.md) | Функции выполнения кода |
 | [Прочие функции](/Code/Functions/OtherFunctions/README.md) | Прочие функции, которые не входят в другие категории. |
 
 

@@ -1,12 +1,15 @@
 # Режим просмотра каталога
 
-Нажимаем <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>f8</kbd>. Получаем интерфейс позволяющий получить данные из [каталога](http://news.websoft.ru/view_doc.html?mode=catalogs&doc_id=5900009198344233396).
+Нажимаем ctrl + shift + f8. Получаем интерфейс позволяющий получить данные из [каталога](http://news.websoft.ru/view_doc.html?mode=catalogs&amp;doc_id=5900009198344233396).
 
 Интерфейс позволяет:
+
 * просматривать данные каталога
 * фильтровать данные используя различные настройки
 * сделать свой XQuery запрос
 * копировать данные
 
+![](/WebtutorAdministrator/CatalogViewMode.gif)
 
-![](/img/6-3.gif)
+
+

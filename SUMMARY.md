@@ -1,4 +1,4 @@
-# Summary
+# Содержание
 
 * [Оглавление](/README.md)
 * [Содержание](SUMMARY.md)
@@ -74,10 +74,19 @@
     * [Прочие функции](Code/Functions/OtherFunctions/README.md)
       * [startMatrix](Code/Functions/OtherFunctions/startMatrix.md)
       * [tools.start\_agent](Code/Functions/OtherFunctions/tools.start_agent.md)
+    * [Выполнение кода](Code/Functions/CodeExecution/README.md)
+      * [OpenCodeLib](Code/Functions/CodeExecution/OpenCodeLib.md)
+      * [EvalCodeUrl](Code/Functions/CodeExecution/EvalCodeUrl.md)
+  * [Решения](Code/Solutions/README.md)
 * [Webtutor Administrator](WebtutorAdministrator/README.md)
+  * [Получить ID элемента](WebtutorAdministrator/GetElementId.md)
+  * [Открыть элемент по ID](WebtutorAdministrator/OpenElementById.md)
+  * [Режим просмотра каталога](WebtutorAdministrator/CatalogViewMode.md)
+  * [Создать копию элемента](WebtutorAdministrator/CloneElement.md)
 * [Полезные ссылки](UsefulLinks/README.md)
-* [Костыли и велосипеды](CrutchesAndBicycles/README.md)
 * [Отладка](/Debugging/README.md)
 * [Содействие](/CONTRIBUTING.md)
 * [Авторы](CONTRIBUTORS.md)
+
+
 

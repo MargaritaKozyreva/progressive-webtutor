@@ -2,4 +2,5 @@
 
 Получить ID элемента и скопировать его в буфер обмена. Также можно получить Hex ID.
 
-![](/img/6-1.gif)
+![](/WebtutorAdministrator/GetElementId.gif)
+
