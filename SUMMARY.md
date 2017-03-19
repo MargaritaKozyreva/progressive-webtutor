@@ -1,4 +1,4 @@
-# Содержание
+# Summary
 
 * [Оглавление](/README.md)
 * [Содержание](SUMMARY.md)
@@ -27,6 +27,7 @@
       * [StrDate](Code/Functions/ConvertFormatsAndEncodings/StrDate.md)
     * [Работа со строками](Code/Functions/WorkWithStrings/README.md)
       * [StrReplace](Code/Functions/WorkWithStrings/StrReplace.md)
+      * [StrContains](Code/Functions/WorkWithStrings/StrContains.md)
     * [Работа с датами](Code/Functions/WorkWithDates/README.md)
     * [Работа с массивами](Code/Functions/WorkWithArrays/README.md)
       * [ArrayCount](Code/Functions/WorkWithArrays/ArrayCount.md)
@@ -88,6 +89,4 @@
 * [Отладка](/Debugging/README.md)
 * [Содействие](/CONTRIBUTING.md)
 * [Авторы](CONTRIBUTORS.md)
-
-
 
