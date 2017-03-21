@@ -81,6 +81,7 @@
       * [OpenCodeLib](Code/Functions/CodeExecution/OpenCodeLib.md)
       * [EvalCodeUrl](Code/Functions/CodeExecution/EvalCodeUrl.md)
   * [Решения](Code/Solutions/README.md)
+  * [Встроенные объекты](Code/EmbeddedObjects/README.md)
 * [Webtutor Administrator](WebtutorAdministrator/README.md)
   * [Получить ID элемента](WebtutorAdministrator/GetElementId.md)
   * [Открыть элемент по ID](WebtutorAdministrator/OpenElementById.md)
