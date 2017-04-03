@@ -63,6 +63,7 @@
     * [Работа с файловой системой](Code/Functions/WorkingWithTheFileSystem/README.md)
       * [copyFile](Code/Functions/WorkingWithTheFileSystem/copyFile.md)
       * [DeleteFile](Code/Functions/WorkingWithTheFileSystem/DeleteFile.md)
+      * [DeleteDirectory](Code/Functions/WorkingWithTheFileSystem/DeleteDirectory.md)
       * [FilePathExist](Code/Functions/WorkingWithTheFileSystem/FilePathExists.md)
       * [getJsonFromServer](Code/Functions/WorkingWithTheFileSystem/getJsonFromServer.md)
       * [IsDirectory](Code/Functions/WorkingWithTheFileSystem/IsDirectory.md)
@@ -72,7 +73,6 @@
       * [ReadDirectory](Code/Functions/WorkingWithTheFileSystem/ReadDirectory.md)
       * [UrlToFilePath](Code/Functions/WorkingWithTheFileSystem/UrlToFilePath.md)
       * [ZipExtract](Code/Functions/WorkingWithTheFileSystem/ZipExtract.md)
-      * [MoveFile](Code/Functions/WorkingWithTheFileSystem/MoveFile.md)
       * [DeleteDirectory](Code/Functions/WorkingWithTheFileSystem/DeleteDirectory.md)
     * [Прочие функции](Code/Functions/OtherFunctions/README.md)
       * [startMatrix](Code/Functions/OtherFunctions/startMatrix.md)
@@ -90,4 +90,6 @@
 * [Отладка](/Debugging/README.md)
 * [Содействие](/CONTRIBUTING.md)
 * [Авторы](CONTRIBUTORS.md)
+
+
 
