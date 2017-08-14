@@ -22,7 +22,7 @@ arr = XQuery("
 SELECT
 c.id AS id,
 cs.fullname AS fullname,
-c.data.value('collaborator/custom_elems/custom_elem[name=\"GK_hire_date\"][1]/value', 'varchar(512)') AS GK_hire_date,
+c.data.value('collaborator/custom_elems/custom_elem[name="GK_hire_date"][1]/value', 'varchar(512)') AS GK_hire_date,
 c.data.value('collaborator/org_name', 'varchar(512)') AS org_name,
 c.data.value('collaborator/is_dismiss', 'bit') AS is_dismiss
 
@@ -40,7 +40,7 @@ INNER JOIN positions AS ps ON cs.position_id = ps.id
 
 ```js
 // Используем SQL функцию DATEADD() в SQL XQuery
-arr = XQuery('for $elem in collaborators where $elem/modification_date > DATEADD(day, -5, GETDATE())  return $elem');
+arr = XQuery('sql:for $elem in collaborators where $elem/modification_date > DATEADD(day, -5, GETDATE())  return $elem');
 ```
 
 
