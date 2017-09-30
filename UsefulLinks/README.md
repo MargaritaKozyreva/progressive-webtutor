@@ -1,11 +1,14 @@
 # Полезные ссылки
 
-В данном разделе собраны ссылки на документацию, статьи и другую информацию, которая будут полезна при разработке в Webtutor.
+В данном разделе собраны ссылки на документацию, статьи и другую информацию, которая будут полезна при разработке в WebTutor.
+
+## Ссылки связанные с системой WebTutor
 
 Многие ссылки ведут на закрытый портал [news.websoft.ru](news.websoft.ru) компании WebSoft. Для доступа обратитесь в [службу поддержки WebSoft](http://websoft.ru/db/wb/root_id/support/doc.html).
 
 | Ссылки | Описание |
 | --- | --- |
+| [Разработка приложений на платформе WebTutor](http://news.websoft.ru/view_doc.html?mode=doc&doc_id=5900009198344233392) | Раздел с полезными ссылками от компании WebSoft. |
 | [Платформа SP-XML](http://docs.datex.ru/) | Основная информация о платформе на которой работает Webtutor. Общие сведения, встроенные функции, объекты и многое другое. |
 | [Функции SP-XML](http://news.websoft.ru/view_doc.html?mode=catalogs&doc_id=5900009198344233396) | Таблица с функциями SP-XML. |
 | [Функции wtv\_tools.xml](http://news.websoft.ru/view_doc.html?mode=doc_type&custom_web_template_id=6180275463021353212&doc_id=6181289497353023487) | Много готовых функций, которые подойдут для решения различных задач. Перед тем как писать свой код, загляните сюда, возможно вы найдете готовое решение. \(`\WebTutorServer\wtv\wtv_tools.xml`\) |
@@ -21,6 +24,17 @@
 | Информационные ресурсы WebSoft \([1](http://news.websoft.ru/view_doc.html?mode=social_blog&doc_id=5971966599214473404),[2](http://websoft-elearning.blogspot.ru/),[3](https://www.facebook.com/WebSoft-162434437160008/)\) | На определенных информационных ресурсах можно встретить статьи связанные с разработкой в WebTutor. |
 | [FAQ WebSoft](http://news.websoft.ru/view_doc.html?mode=doc&doc_id=5900009198344233423) | FAQ содержит разбитые по разделам ссылки до страниц в которых можно встретить полезную для разработки в WebTutor информацию. |
 | [Документация по WebTutor](http://news.websoft.ru/view_doc.html?mode=doc_type&object_id=5486421379493803019&doc_id=5900009198344233385&section_id=5903427210833450983) | Данный раздел будет полезен тем кто никогда раньше не работал с подобной системой. Здесь находится документация описывающая функционал системы в вебе и в интерфейсе WebTutor Administrator. |
+
+## Для развития
+
+| Ссылки |  |
+| :--- | :--- |
+| [Google Developers](https://developers.google.com/web/updates/2017/) |  |
+| [Udacity](https://www.udacity.com/courses/web-development) | [Browser Rendering Optimization](https://www.udacity.com/course/browser-rendering-optimization--ud860), [Website Performance Optimization](https://www.udacity.com/course/website-performance-optimization--ud884), [Responsive Web Design Fundamentals](https://www.udacity.com/course/responsive-web-design-fundamentals--ud893), [Client-Server Communication](https://www.udacity.com/course/client-server-communication--ud897), [Responsive Images](https://www.udacity.com/course/responsive-images--ud882) |
+| [Google Developers Codelabs](https://codelabs.developers.google.com/) |  |
+| [YouTube ChromeDevelopers](https://www.youtube.com/user/ChromeDevelopers/videos) |  |
+| [Firebase](https://firebase.google.com/) |  |
+| [Material Design](https://material.io/) |  |
 
 
 
