@@ -48,8 +48,8 @@
 
 | Разделы |
 | :--- |
-| Установка SQL Server |
-| Установка SQL Server Management Studio |
+| [Установка SQL Server](/Development/TestSystem/InstallationSQLServer/README.md) |
+| [Установка SQL Server Management Studio](/Development/TestSystem/InstallationSSMS/README.md) |
 | Установка WebTutor |
 | Проброс портов |
 
