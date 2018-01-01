@@ -5,7 +5,9 @@
 * [Основы](BasicInformation/README.md)
   * [О Webtutor](BasicInformation/AboutWebtutor.md)
   * [Структура директорий](BasicInformation/DirectoryStructure.md)
+* [Разработка](razrabotka.md)
 * [Варианты разработки](DevelopmentOptions/README.md)
+* [Подготовка](podgotovka.md)
 * [Советы](/Advice/README.md)
 * [Код](/Code/README.md)
   * [Синтаксис](/Code/Syntax/README.md)
@@ -89,7 +91,4 @@
 * [Полезные ссылки](UsefulLinks/README.md)
 * [Отладка](/Debugging/README.md)
 * [Содействие](/CONTRIBUTING.md)
-* [Авторы](CONTRIBUTORS.md)
-
-
 
