@@ -24,14 +24,16 @@
 
    ![](/Development/TestSystem/PrepairingWindows/7.jpg)
 
-8. Запускаем cmd.exe от имени администратора \(C:\Windows\SysWOW64\cmd.exe\) \(если у вас 32-битная система, тогда запустите C:\Windows\System32\cmd.exe\)  
+8. Аналогично нужно выдать права группе Пользователи для папки C:\Program Files\WebSoft\WebTutorAdmin
+
+9. Запускаем cmd.exe от имени администратора \(C:\Windows\SysWOW64\cmd.exe\) \(если у вас 32-битная система, тогда запустите C:\Windows\System32\cmd.exe\)  
    ![](/Development/TestSystem/PrepairingWindows/8.jpg)
 
-9. Введите cd C:\Program Files\WebSoft\WebTutorServer\storage и нажмите Enter
+10. Введите cd C:\Program Files\WebSoft\WebTutorServer\storage и нажмите Enter
 
-10. Введите install32.cmd, нажмите Enter,
+11. Введите install32.cmd, нажмите Enter,
 
-11. Если у вас 64-битный Windows, введите install64.cmd, нажмите Enter
+12. Если у вас 64-битный Windows, введите install64.cmd, нажмите Enter
 
 
 
