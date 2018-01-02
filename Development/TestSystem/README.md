@@ -21,7 +21,7 @@
 * Относительно мощный компьютер \(тут по ситуации, думаю необходимая мощность будет зависеть от размеров базы данных, могу только сказать, что c 250GB MS SQL базой, на ноутбуке с четырехъядерным i7-4700MQ 2.4 GHz, 8GB DDR3 и SSD диском, все летает\)
 * ПО
 
-  * Windows 10 Pro \(Windows можно и других версий, главное, чтобы была возможность устанавливать дополнительные модули в разделе Program and Features \(Установка и Удаление программ\) IIS, FTP и была возможность подключаться через RDP\)
+  * Windows 10 Pro 64-bit\(1709 16299.125\) \(Windows можно и других версий, главное, чтобы была возможность устанавливать дополнительные модули в разделе Program and Features \(Установка и Удаление программ\) IIS, FTP и была возможность подключаться через RDP\)
   * WebTutor
   * SQL Server
   * SQL Server Management Studio
@@ -40,6 +40,7 @@
 
 Используемое ПО:
 
+* Windows 10 Pro 64-bit \(Version: 1709  OS Build: 16299.125\)
 * WebTutor 3.4.0\(38\) \(ссылку на данную и более новые версии необходимо запросить в [службе поддержки WebSoft](http://news.websoft.ru)\)
 * [SQL Server 2017 Express \(en\)](https://www.microsoft.com/en-us/download/details.aspx?id=55994) \(14.1710.3866.2\)
 * [SQL Server Management Studio \(en\)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x409) \(17.4\)
@@ -50,7 +51,9 @@
 | :--- |
 | [Установка SQL Server](/Development/TestSystem/InstallationSQLServer/README.md) |
 | [Установка SQL Server Management Studio](/Development/TestSystem/InstallationSSMS/README.md) |
-| Установка WebTutor |
+| [Установка WebTutor](/Development/TestSystem/InstallationWebTutor/README.md) |
+| [Подготовка Windows](/Development/TestSystem/PrepairingWindows/README.md) |
+| Запуск WebTutor в режиме IIS |
 | Проброс портов |
 
 

@@ -30,7 +30,7 @@
    ![](/Development/TestSystem/InstallationSQLServer/7.jpg)![](/Development/TestSystem/InstallationSQLServer/8.jpg)
 
 10. Жмем Next  
-    ![](/Development/TestSystem/InstallationSQLServer/9.jpg)  
+    ![](/Development/TestSystem/InstallationSQLServer/9.jpg)
 
 11. Жмем Accept, затем Next  
     ![](/Development/TestSystem/InstallationSQLServer/10.jpg)
@@ -38,7 +38,7 @@
 12. Жмем Accept, затем Next  
     ![](/Development/TestSystem/InstallationSQLServer/12.jpg)
 
-13. Жмем Next  
+13. Жмем Close  
     ![](/Development/TestSystem/InstallationSQLServer/14.jpg)
 
 14. Закрываем окно  
