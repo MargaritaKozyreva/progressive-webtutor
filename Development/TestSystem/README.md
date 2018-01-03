@@ -66,7 +66,9 @@
 | Установка SQL Server |
 | Установка SQL Server Management Studio |
 | Подключение WebTutor к IIS |
-| Подключение  |
+| Подключение WebTutor к SQL Server |
+| Запуск WebTutor |
+| Проброс портов |
 
 
 
