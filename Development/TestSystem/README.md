@@ -40,7 +40,8 @@
 
 Используемое ПО:
 
-* Windows 10 Pro 64-bit \(Version: 1709  OS Build: 16299.125\)
+* Windows 10 Pro 64-bit \(Version 1709  OS Build 16299.125\)
+* Internet Information Services \(IIS\) \(Version 10.0.16299.15\)
 * WebTutor 3.4.0\(38\) \(ссылку на данную и более новые версии необходимо запросить в [службе поддержки WebSoft](http://news.websoft.ru)\)
 * [SQL Server 2017 Express \(en\)](https://www.microsoft.com/en-us/download/details.aspx?id=55994) \(14.1710.3866.2\)
 * [SQL Server Management Studio \(en\)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x409) \(17.4\)
@@ -53,7 +54,8 @@
 | [Установка SQL Server Management Studio](/Development/TestSystem/InstallationSSMS/README.md) |
 | [Установка WebTutor](/Development/TestSystem/InstallationWebTutor/README.md) |
 | [Подготовка Windows](/Development/TestSystem/PrepairingWindows/README.md) |
-| Запуск WebTutor в режиме IIS |
+| [Запуск WebTutor в режиме IIS](/Development/TestSystem/StartWebTutorIISMode/README.md) |
+| Настройка WebTutor |
 | Проброс портов |
 
 
