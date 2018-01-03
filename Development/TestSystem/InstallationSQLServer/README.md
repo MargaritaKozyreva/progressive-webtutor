@@ -1,48 +1,50 @@
 # Установка SQL Server
 
-Здесь будет устанавливаться SQL Server Express, так как данная версия сервера бесплатна, но имеет ограничения \(к примеру на размер базы данных\).
+Здесь будет показана установка SQL Server Developer.
 
-Если у вас есть лицензия для SQL Server, то можете установить полноценный SQL Server без каких-либо ограничений.
+Можете аналогично установить полноценный SQL Server, если у вас есть лицензия.
 
-1. Скачиваем [Microsoft SQL Server 2017 Express \(en\)](https://www.microsoft.com/en-us/download/details.aspx?id=55994) \(14.1710.3866.2\)
+1. Скачиваем [SQL Server 2017 Developer \(14.1710.3866.2\)](https://www.microsoft.com/ru-ru/sql-server/developer-tools)
 
 2. Запускаем
 
-3. Выбираем тип установки Custom  
-   ![](/Development/TestSystem/InstallationSQLServer/1.jpg)
+3. Жмем `Custom`![](/Development/TestSystem/InstallationSQLServer/1.jpg)
 
-4. В открывшемся окне выбираем New SQL Server stand-alone installation or add features to an existing installation  
-   ![](/Development/TestSystem/InstallationSQLServer/2.jpg)
+4. Жмем `Install`![](/Development/TestSystem/InstallationSQLServer/2.jpg)
 
-5. Жмем Next  
-   ![](/Development/TestSystem/InstallationSQLServer/3.jpg)
+5. Жмем `Installation`, затем `New SQL Server stand-alone installation or add features to an existing installation`![](/Development/TestSystem/InstallationSQLServer/3.jpg)
 
-6. Ставим галку, жмем Next  
-   ![](/Development/TestSystem/InstallationSQLServer/4.jpg)
+6. Жмем `Next`![](/Development/TestSystem/InstallationSQLServer/4.jpg)
 
-7. Проверяем, что в списке Features выбран Full-Text and Semantic Extractions for Search \(полнотекстовый поиск\), после чего жмем Next  
-   ![](/Development/TestSystem/InstallationSQLServer/5.jpg)
+7. Ставим галку, жмем `Next`![](/Development/TestSystem/InstallationSQLServer/5.jpg)
 
-8. Жмем Next  
-   ![](/Development/TestSystem/InstallationSQLServer/6.jpg)
+8. Жмем `Next`![](/Development/TestSystem/InstallationSQLServer/6.jpg)
 
-9. Переходим на закладку Collation и проверяем, что стоит сопоставление Cyrillic\_General\_CI\_AS_,_ жмем Next  
-   ![](/Development/TestSystem/InstallationSQLServer/7.jpg)![](/Development/TestSystem/InstallationSQLServer/8.jpg)
+9. Выбираем в списке все кроме `PolyBase Query Service for External Data`, затем `Next`
 
-10. Жмем Next  
-    ![](/Development/TestSystem/InstallationSQLServer/9.jpg)
+10. Жмем `Next`
 
-11. Жмем Accept, затем Next  
-    ![](/Development/TestSystem/InstallationSQLServer/10.jpg)
+11. Жмем `Next`
 
-12. Жмем Accept, затем Next  
-    ![](/Development/TestSystem/InstallationSQLServer/12.jpg)
+12. Переходим на закладку `Collation`, смотрим, что везде стоит сопоставление `Cyrillic_General_CI_AS`_,_ жмем `Next`
 
-13. Жмем Close  
-    ![](/Development/TestSystem/InstallationSQLServer/14.jpg)
+13. Жмем `Add Current User`, затем `Next`
 
-14. Закрываем окно  
-    ![](/Development/TestSystem/InstallationSQLServer/15.jpg)
+14. Жмем `Add Current User`, затем `Next`
+
+15. Жмем `Next`
+
+16. Жмем `Next`
+
+17. Жмем `Accept`, затем `Next`
+
+18. Жмем `Accept`, затем `Next`
+
+19. Жмем `Install`
+
+20. Жмем `Close`
+
+21. Закрываем окно
 
 
 
