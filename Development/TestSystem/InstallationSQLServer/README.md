@@ -20,31 +20,35 @@
 
 8. Жмем `Next`![](/Development/TestSystem/InstallationSQLServer/6.jpg)
 
-9. Выбираем в списке все кроме `PolyBase Query Service for External Data`, затем `Next`
+9. Выбираем в списке все кроме `PolyBase Query Service for External Data`, затем жмем `Next`![](/Development/TestSystem/InstallationSQLServer/0.jpg)
 
-10. Жмем `Next`
+10. Жмем `Next`![](/Development/TestSystem/InstallationSQLServer/7.jpg)
 
-11. Жмем `Next`
+11. Жмем `Next`![](/Development/TestSystem/InstallationSQLServer/8.jpg)
 
-12. Переходим на закладку `Collation`, смотрим, что везде стоит сопоставление `Cyrillic_General_CI_AS`_,_ жмем `Next`
+12. Переходим на закладку `Collation`, смотрим, что везде стоит сопоставление `Cyrillic_General_CI_AS`_,_ жмем `Next`![](/Development/TestSystem/InstallationSQLServer/9.jpg)
 
-13. Жмем `Add Current User`, затем `Next`
+13. Жмем `Add Current User`, затем `Next`![](/Development/TestSystem/InstallationSQLServer/10.jpg)
 
-14. Жмем `Add Current User`, затем `Next`
+14. Жмем `Add Current User`, затем `Next`![](/Development/TestSystem/InstallationSQLServer/11.jpg)
 
-15. Жмем `Next`
+15. Жмем `Next`![](/Development/TestSystem/InstallationSQLServer/12.jpg)
 
-16. Жмем `Next`
+16. Жмем `Next`![](/Development/TestSystem/InstallationSQLServer/13.jpg)
 
-17. Жмем `Accept`, затем `Next`
+17. Жмем `Add Current User`, затем `Next`![](/Development/TestSystem/InstallationSQLServer/14.jpg)
 
-18. Жмем `Accept`, затем `Next`
+18. Жмем `Next`![](/Development/TestSystem/InstallationSQLServer/15.jpg)
 
-19. Жмем `Install`
+19. Жмем `Accept`, затем `Next`![](/Development/TestSystem/InstallationSQLServer/16.jpg)
 
-20. Жмем `Close`
+20. Жмем `Accept`, затем `Next`![](/Development/TestSystem/InstallationSQLServer/17.jpg)
 
-21. Закрываем окно
+21. Жмем `Install`![](/Development/TestSystem/InstallationSQLServer/18.jpg)
+
+22. Жмем `Close`![](/Development/TestSystem/InstallationSQLServer/19.jpg)
+
+23. Закрываем окно![](/Development/TestSystem/InstallationSQLServer/20.jpg)
 
 
 
