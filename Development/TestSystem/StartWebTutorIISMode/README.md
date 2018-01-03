@@ -1,32 +1,32 @@
-# Запуск WebTutor в режиме IIS
+# Подключение WebTutor к IIS
 
-1. Для удобства, создадим на рабочем столе 3 ярлыка   
+1. Для удобства, создадим на рабочем столе 3 ярлыка  
    WebTutor Server \(C:\Program Files\WebSoft\WebTutorServer\SpXml.exe\)  
    WebTutor Administrator \(C:\Program Files\WebSoft\WebTutorAdmin\spxml.exe\)  
-   IIS \(%windir%\system32\inetsrv\InetMgr.exe\)  
-  
+   IIS \(%windir%\system32\inetsrv\InetMgr.exe\)
+
    ![](/Development/TestSystem/StartWebTutorIISMode/1.jpg)
 
 2. Переходим в IIS и удаляем там существующие сайты, чтобы ничего не занимало 80 порт. Порт 80 и другие порты, которые вы захотите использовать, могут занимать и другие программы \(к примеру Skype, SQL Server Reporting Service, итд любят занимать 80 порт\), так что всегда имейте это ввиду и если у вас что-то не будет работать, то возможно ваш порт уже занят какой-то другой программой.  
    ![](/Development/TestSystem/StartWebTutorIISMode/2.jpg)
 
-3. Запускаем WebTutor Server, жмем на флаг России
+3. Запускаем WebTutor Server, жмем на флаг России  
    ![](/Development/TestSystem/StartWebTutorIISMode/3.jpg)
 
-4. В появившемся окне, жмем No \(Нет\)
+4. В появившемся окне, жмем No \(Нет\)  
    ![](/Development/TestSystem/StartWebTutorIISMode/4.jpg)
 
-5. В закладке Режим работы, ставим галку напротив IIS, в поле порт пишем 8787, жмем Переключить режим
-   \(можно задать любой другой свободный порт на свое усмотрение, хотя тут было бы логично задать порт 80 или 443, но это необязательно и мы не будем трогать эти стандартные порты, так как они в будущем скорее всего пригодятся для чего-нибудь еще\)
+5. В закладке Режим работы, ставим галку напротив IIS, в поле порт пишем 8787, жмем Переключить режим  
+   \(можно задать любой другой свободный порт на свое усмотрение, хотя тут было бы логично задать порт 80 или 443, но это необязательно и мы не будем трогать эти стандартные порты, так как они в будущем скорее всего пригодятся для чего-нибудь еще\)  
    ![](/Development/TestSystem/StartWebTutorIISMode/5.jpg)
 
-6. В появившемся окне жмем Yes \(Да\)
+6. В появившемся окне жмем Yes \(Да\)  
    ![](/Development/TestSystem/StartWebTutorIISMode/6.jpg)
 
-7. После переключения в IIS в Application Pools \(Пулы приложений\) и в Sites \(Сайты\) появится WebTutorCorpServer
+7. После переключения в IIS в Application Pools \(Пулы приложений\) и в Sites \(Сайты\) появится WebTutorCorpServer  
    ![](/Development/TestSystem/StartWebTutorIISMode/7.jpg)
 
-8. Перейдите в Application Pools \(Пулы приложений\), нажмите на WebTutorCorpServer, затем справа на Advanced Settings... \(Дополнительные параметры...\)
+8. Перейдите в Application Pools \(Пулы приложений\), нажмите на WebTutorCorpServer, затем справа на Advanced Settings... \(Дополнительные параметры...\)  
    ![](/Development/TestSystem/StartWebTutorIISMode/8.jpg)
 
 9. Установите значения следующих параметров  
@@ -36,7 +36,7 @@
    **Regular Time Interval** = 0  
    ![](/Development/TestSystem/StartWebTutorIISMode/9.jpg)
 
-10. Если используется англоязычная версия Windows, то в параметре Identity укажите учетную запись администратора, под которой будет запускаться пул,   
+10. Если используется англоязычная версия Windows, то в параметре Identity укажите учетную запись администратора, под которой будет запускаться пул,  
     ![](/Development/TestSystem/StartWebTutorIISMode/10.jpg)
 
 11. Нажмите OK
@@ -55,8 +55,8 @@
 
 14. Нажмите ОК
 
-15. В появившемся окне нажмите ОК  
-  
+15. В появившемся окне нажмите ОК
+
     ![](/Development/TestSystem/StartWebTutorIISMode/13.jpg)
 
 16. Перейдите в Sites \(Сайты\), нажмите на WebTutorCorpServer, по центру войдите в RequestFiltering \(Фильтрация запросов\)  
@@ -90,7 +90,7 @@
     **IP address \(IP адрес\)** = All Unassigned  
     **Port \(Порт\)** = 8989  
     **SSL certificate \(SSL сертификат\)** = WebTutorTestSystemCertificate  
-    ![](/Development/TestSystem/StartWebTutorIISMode/24.jpg)  
+    ![](/Development/TestSystem/StartWebTutorIISMode/24.jpg)
 
 26. Выделите строку в которой Port = 8787 и нажмите Remove \(Удалить\)  
     ![](/Development/TestSystem/StartWebTutorIISMode/25.jpg)
@@ -105,29 +105,13 @@
     \#LDS-HTTPS: 1 на LDS-HTTPS: 1 \(это необходимо для входа в WebTutor Administrator по протоколу https\)  
     ![](/Development/TestSystem/StartWebTutorIISMode/27.jpg)
 
-30. В WebTutor Server на вкладке База данных переключаем Хранение данных на MS SQL и нажимаем на Мастер настройки базы данных  
-    ![](/Development/TestSystem/StartWebTutorIISMode/28.jpg)
-
-31. В открывшемся окне, заполните поля и нажмите Далее  
-    **Сервер БД** = localhost\SQLEXPRESS  
-    **Название БД** = wt  
-    **Поставить галку: **Создание базы данных в случае отсутствия таковой  
-    **Поставить галку:** Интегрированная авторизация  
-    ![](/Development/TestSystem/StartWebTutorIISMode/29.jpg)
-
-32. Жмем Далее  
-    ![](/Development/TestSystem/StartWebTutorIISMode/30.jpg)
-
-33. Жмем Завершить  
-    ![](/Development/TestSystem/StartWebTutorIISMode/31.jpg)
-
-34. Возвращаемся в IIS и проверяем, что там все запущено, если не запущено, запускаем  
+30. Возвращаемся в IIS и проверяем, что там все запущено, если не запущено, запускаем  
     ![](/Development/TestSystem/StartWebTutorIISMode/32.jpg)![](/Development/TestSystem/StartWebTutorIISMode/33.jpg)![](/Development/TestSystem/StartWebTutorIISMode/34.jpg)
 
-35. При первом запуске WebTutor, в SQL базе данных wt начнут создаваться таблицы WebTutor, можете посмотреть как они появляются в SSMS  
+31. При первом запуске WebTutor, в SQL базе данных wt начнут создаваться таблицы WebTutor, можете посмотреть как они появляются в SSMS  
     ![](/Development/TestSystem/StartWebTutorIISMode/35.jpg)
 
-36. Когда создание таблиц в SQL завершится в браузере по адресу [https://localhost:8787](https://localhost:8787) будет такая картина  
+32. Когда создание таблиц в SQL завершится в браузере по адресу [https://localhost:8787](https://localhost:8787) будет такая картина  
     ![](/Development/TestSystem/StartWebTutorIISMode/36.jpg)
 
 

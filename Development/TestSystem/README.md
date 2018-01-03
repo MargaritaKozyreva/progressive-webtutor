@@ -54,9 +54,19 @@
 | [Установка SQL Server Management Studio](/Development/TestSystem/InstallationSSMS/README.md) |
 | [Установка WebTutor](/Development/TestSystem/InstallationWebTutor/README.md) |
 | [Подготовка Windows](/Development/TestSystem/PrepairingWindows/README.md) |
-| [Запуск WebTutor в режиме IIS](/Development/TestSystem/StartWebTutorIISMode/README.md) |
+| [Подключение WebTutor к IIS](/Development/TestSystem/StartWebTutorIISMode/README.md) |
+| Подключение WebTutor к SQL Server |
+| Установка IIS |
+|  |
 | Настройка WebTutor |
 | Проброс портов |
+|  |
+| Установка WebTutor |
+| Установка IIS |
+| Установка SQL Server |
+| Установка SQL Server Management Studio |
+| Подключение WebTutor к IIS |
+| Подключение  |
 
 
 
