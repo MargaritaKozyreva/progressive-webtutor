@@ -57,7 +57,7 @@
 | [Подключение WebTutor к IIS](/Development/TestSystem/ConnectingWebTutorToIIS/README.md) |
 | [Подключение WebTutor к SQL Server](/Development/TestSystem/ConnectingWebTutorToSQLServer/README.md) |
 | [Запуск WebTutor](/Development/TestSystem/StartWebTutor/README.md) |
-|  |
+| [FTP доступ](/Development/TestSystem/FTPAccess/README.md) |
 | Проброс портов |
 
 
