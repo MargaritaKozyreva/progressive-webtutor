@@ -6,7 +6,7 @@
 
 Необходимо, чтобы система была удобна в использовании для всех сторон: разработчиков, тестировщиков и заказчика. Самый оптимальный, проверенный вариант, это такая схема:
 
-* Windows + WebTutor + IIS + MS SQL 
+* Windows + WebTutor + IIS + MS SQL
 * доступ в WebTutor Administrator
 * FTP доступ
 * RDP доступ
@@ -38,36 +38,26 @@
 
 В книге используются последние на момент написания версии ПО, вы на свое усмотрение можете его комбинировать, использовать более новые или старые версии, процесс установки со временем почти не меняется и все скорее всего будет работать.
 
-Используемое ПО:
+Используемое в книге ПО:
 
 * Windows 10 Pro 64-bit \(Version 1709  OS Build 16299.125\)
 * Internet Information Services \(IIS\) \(Version 10.0.16299.15\)
 * WebTutor 3.4.0\(38\) \(ссылку на данную и более новые версии необходимо запросить в [службе поддержки WebSoft](http://news.websoft.ru)\)
-* [SQL Server 2017 Express \(en\)](https://www.microsoft.com/en-us/download/details.aspx?id=55994) \(14.1710.3866.2\)
+* [SQL Server 2017 Developer \(14.1710.3866.2\)](https://www.microsoft.com/ru-ru/sql-server/developer-tools)
 * [SQL Server Management Studio \(en\)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x409) \(17.4\)
 
 ## Этапы установки тестовой системы
 
 | Разделы |
 | :--- |
+| [Установка WebTutor](/Development/TestSystem/InstallationWebTutor/README.md) |
+| [Установка IIS](/Development/TestSystem/InstallationIIS/README.md) |
 | [Установка SQL Server](/Development/TestSystem/InstallationSQLServer/README.md) |
 | [Установка SQL Server Management Studio](/Development/TestSystem/InstallationSSMS/README.md) |
-| [Установка WebTutor](/Development/TestSystem/InstallationWebTutor/README.md) |
-| [Подготовка Windows](/Development/TestSystem/PrepairingWindows/README.md) |
-| [Подключение WebTutor к IIS](/Development/TestSystem/StartWebTutorIISMode/README.md) |
-| Подключение WebTutor к SQL Server |
-| Установка IIS |
+| [Подключение WebTutor к IIS](/Development/TestSystem/ConnectingWebTutorToIIS/README.md) |
+| [Подключение WebTutor к SQL Server](/Development/TestSystem/ConnectingWebTutorToSQLServer/README.md) |
+| [Запуск WebTutor](/Development/TestSystem/StartWebTutor/README.md) |
 |  |
-| Настройка WebTutor |
-| Проброс портов |
-|  |
-| Установка WebTutor |
-| Установка IIS |
-| Установка SQL Server |
-| Установка SQL Server Management Studio |
-| Подключение WebTutor к IIS |
-| Подключение WebTutor к SQL Server |
-| Запуск WebTutor |
 | Проброс портов |
 
 
