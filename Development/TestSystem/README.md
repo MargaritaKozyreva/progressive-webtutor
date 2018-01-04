@@ -58,7 +58,7 @@
 | [Подключение WebTutor к SQL Server](/Development/TestSystem/ConnectingWebTutorToSQLServer/README.md) |
 | [Запуск WebTutor](/Development/TestSystem/StartWebTutor/README.md) |
 | [FTP доступ](/Development/TestSystem/FTPAccess/README.md) |
-| Проброс портов |
+| Доступ из интернета |
 
 
 
