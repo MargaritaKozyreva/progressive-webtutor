@@ -41,11 +41,12 @@
 
 Используемое в книге ПО:
 
-* Windows 10 Pro 64-bit \(Version 1709  OS Build 16299.125\)
-* Internet Information Services \(IIS\) \(Version 10.0.16299.15\)
+* Windows 10 Pro 64-bit \(1709  OS Build 16299.125\)
+* Internet Information Services \(IIS\) \(10.0.16299.15\)
 * WebTutor 3.4.0\(38\) \(ссылку на данную и более новые версии необходимо запросить в [службе поддержки WebSoft](http://news.websoft.ru)\)
 * [SQL Server 2017 Developer \(14.1710.3866.2\)](https://www.microsoft.com/ru-ru/sql-server/developer-tools)
 * [SQL Server Management Studio \(en\)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x409) \(17.4\)
+* [FakeSMTP \(2.0\)](http://nilhcem.com/FakeSMTP/download.html)
 
 ## Этапы установки тестовой системы
 
