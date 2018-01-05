@@ -59,6 +59,7 @@
 | [Подключение WebTutor к SQL Server](/Development/TestSystem/ConnectingWebTutorToSQLServer/README.md) |
 | [Запуск WebTutor](/Development/TestSystem/StartWebTutor/README.md) |
 | [FTP доступ](/Development/TestSystem/FTPAccess/README.md) |
+| [Подключение WebTutor к SMTP](/Development/TestSystem/ConnectingWebTutorToSMTP/README.md) |
 | [Доступ из интернета](/Development/TestSystem/InternetAccess/README.md) |
 | [Еще](/Development/TestSystem/EvenMore/README.md) |
 
