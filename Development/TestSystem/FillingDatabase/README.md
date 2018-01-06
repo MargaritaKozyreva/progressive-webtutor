@@ -139,12 +139,15 @@
        doc.BindToDb(DefaultDb)
        doc.Save()
    }
-
    ```
 
 4. Удаляем файл `C:\filler\users\users.json`
 
 5. Готово
+
+## Создание курсов
+
+
 
 
 
