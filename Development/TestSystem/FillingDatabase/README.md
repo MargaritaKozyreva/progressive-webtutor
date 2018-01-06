@@ -143,7 +143,7 @@ for (var i = 0; i < usersObj.length; i++) {
 
 1\) Проходим по ссылке [https://www.udacity.com/public-api/v0/courses](https://www.udacity.com/public-api/v0/courses) и сохраняем содержимое страницы в файл `C:\filler\courses\courses.json`
 
-2\) Создайте файл `C:\filler\courses\get-miniatures.js` с таким содержимым:  
+2\) Создайте файл `C:\filler\courses\get-miniatures.js` с таким содержимым:
 
 ```js
    'use strict'
@@ -188,8 +188,8 @@ npm install fs + Enter
 npm install request + Enter  
 node get-miniatures.js + Enter
 
-4\) Копируем файл:  
-  
+4\) Копируем файл:
+
 `C:\filler\users\courses.json` в `C:\Program Files\WebSoft\WebTutorServer\wt\web`
 
 папку `C:\filler\courses\miniatures` в `C:\Program Files\WebSoft\WebTutorServer\wt\web\assets\courses`
@@ -243,5 +243,7 @@ for (var i = 0; i < coursesObj.length; i++) {
 
 7\) Готово
 
+---
 
+Подобным образом можно заполнять и другие разделы, но в идеале конечно лучше поискать реальную наполненную базу данный.
 
