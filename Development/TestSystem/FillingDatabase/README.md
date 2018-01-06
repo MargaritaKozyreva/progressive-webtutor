@@ -21,8 +21,7 @@
 1. Генерируем json c данными 1000 пользователей. Проходим по ссылке [http://randomuser.ru/api.json?results=1000](http://randomuser.ru/api.json?results=1000) \(цифра в конце ссылки означает количество пользователей, выбирайте на свое усмотрение\) и сохраняем содержимое страницы в файл `C:\filler\users\users.json`.
 2. Создайте файл `C:\filler\users\get-avatars.js`  с таким содержимым:
 
-
-   ```js
+```js
    'use strict'
 
    const request = require('request')
@@ -84,14 +83,16 @@
            }
        }, 3000)
    })
-   ```
+```
 
-3. В командной строке вводим команды и ждем завершения скачивания изображений \(пока не будет написано 100% Complete\), займет это ~ 2.5 часа:
+1. В командной строке вводим команды и ждем завершения скачивания изображений \(пока не будет написано 100% Complete\), займет это ~ 2.5 часа:
 
    cd C:\filler\users + Enter npm install fs + Enter npm install request + Enter node get-avatars.js + Enter
 
-4. Копируем файл `C:\filler\users\users.json` и папку `C:\filler\users\avatars` в `C:\Program Files\WebSoft\WebTutorServer\wt\web`
-5. Запускаем 
+2. Копируем файл `C:\filler\users\users.json` и папку `C:\filler\users\avatars` в `C:\Program Files\WebSoft\WebTutorServer\wt\web`
+
+3. В WebTutor Administrator в `Дизайнер` - `Агенты Сервера` запускаем такой код.
+
    ```js
    // Делаем из строки json javascript массив
    var usersObj = tools.read_object(LoadFileData(UrlToFilePath("x-local://wt/web/users.json")), "json")
@@ -135,10 +136,15 @@
            doc_Top.personal_config.avatar_filename = StrReplace(usersObj[i].user.picture.medium, "http://randomuser.ru/images/women/med/", "")
            doc_Top.personal_config.avatar_filename = StrReplace(doc_Top.personal_config.avatar_filename, ".jpg", "-medium-w.jpg")
        }
-   	doc.BindToDb(DefaultDb)
-    	doc.Save()
+       doc.BindToDb(DefaultDb)
+       doc.Save()
    }
+
    ```
+
+4. Удаляем файл `C:\filler\users\users.json`
+
+5. Готово
 
 
 
