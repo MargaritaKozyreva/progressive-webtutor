@@ -6,8 +6,8 @@
 | [\#](#запрос-на-получение-списка-всех-настраиваемых-полей) | Запрос на получение списка всех настраиваемых полей. |
 | [\#](#отправить-и-создать-клиентский-файл-на-сервере) | Отправить и создать клиентский файл на сервере. |
 | [\#](#некорректная-работа-в-старых-браузерах-ie) | Некорректная работа в браузерах в старых IE |
-
-некорректная-работа-в-старых-ie\) \| Некорректная работа в старых браузерах IE \|
+| [\#](#
+отправка-email-на-произвольный-адрес) | Отправлка Email на произвольный адрес |
 
 #### 
 
@@ -93,9 +93,40 @@ function xhr(body) {
 </script>
 ```
 
+#### 
+
 #### Некорректная работа в старых браузерах IE
 
 Добавьте тег `<meta http-equiv="X-UA-Compatible" content="IE=Edge">` в самое начало документа.
 
 Режим Edge сообщает обозревателю Internet Explorer, чтобы отображать содержимое в самом высоком доступном режиме. В Internet Explorer 9 это эквивалентно режиму IE9. Если будущий выпуск Internet Explorer поддерживает более высокий режим совместимости, страницы, установленные в режиме edge, будут отображаться в самом высоком режиме, поддерживаемом этой версией. Те же самые страницы будут отображаться в режиме IE9 при просмотре с помощью Internet Explorer 9. Internet Explorer поддерживает ряд режимов совместимости документов, которые позволяют использовать разные функции и могут влиять на отображение содержимого. Подробнее по [ссылке](http://qaru.site/questions/10755/what-does-meta-http-equiv-x-ua-compatible-content-ie-edge-do).
+
+####  Отправка Email на произвольный адрес
+
+```js
+function _email(options) {
+    try {
+        var new_doc = tools.new_doc_by_name('active_notification')
+        var doc_topElem = new_doc.TopElem
+        doc_topElem.recipients.AddChild("recipient")
+        doc_topElem.recipients[0].address = options.email
+        doc_topElem.send_date = Date()
+        doc_topElem.is_custom = 1
+        doc_topElem.status = 'active'
+        doc_topElem.body_type = 'html'
+        doc_topElem.subject = options.subject
+        doc_topElem.body = options.body
+        new_doc.BindToDb(DefaultDb)
+        new_doc.Save()
+        return {}
+    }
+    catch (err) {
+        throw new Error('_email: ' + err.message)
+    }
+}
+```
+
+#### 
+
+
 
