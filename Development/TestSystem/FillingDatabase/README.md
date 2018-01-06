@@ -147,5 +147,54 @@
 
 ## Создание курсов
 
+С курсами почти тоже самое, что и с сотрудниками. Берем первый попавшийся сайт с каталогом курсов и у которого есть API и переносим его в WebTutor.  Воспользуемся API [Udacity](https://www.udacity.com).
+
+1. Проходим по ссылке [https://www.udacity.com/public-api/v0/courses](https://www.udacity.com/public-api/v0/courses) и сохраняем содержимое страницы в файл `C:\filler\courses\courses.json`
+2. Создайте файл `C:\filler\courses\get-avatars.js`  с таким содержимым:
+   ```js
+   'use strict'
+   const request = require('request')
+   const fs = require('fs')
+
+   fs.readFile('courses.json', (err, coursesData) => {
+       console.log('Start')
+       if (!fs.existsSync('miniatures')) fs.mkdir('miniatures')
+       let data = JSON.parse(coursesData).courses
+       let requestsArr = []
+       let large, medium, thumbnail
+       for (let i of data) {
+           if (i.image !== '') {
+               requestsArr.push({
+                   "url": i.image,
+                   "filename": i.key
+               })
+           }
+       }
+       var j = 0
+       var interval = setInterval(_ => {
+           if (!(requestsArr.length < j)) {
+               j++
+               request(requestsArr[j].url, {
+                   encoding: 'binary'
+               }, (error, response, body) => {
+                   fs.writeFile('miniatures/' + requestsArr[j].filename + '.jpg', body, 'binary', _ => {})
+                   console.log(+(j / (requestsArr.length / 100)).toFixed(2) + '%')
+               })
+           } else {
+               clearInterval(interval)
+               console.log('100% Complete')
+           }
+       }, 3000)
+   })
+   ```
+3. В командной строке вводим команды и ждем завершения скачивания изображений \(пока не будет написано 100% Complete\), займет это ~ 10 минут:
+
+   cd C:\filler\users + Enter   
+   npm install fs + Enter   
+   npm install request + Enter   
+   node get-avatars.js + Enter
+
+
+
 
 
