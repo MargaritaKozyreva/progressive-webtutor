@@ -69,7 +69,7 @@
        }
        var j = 0
        var interval = setInterval(_ => {
-           if (!(requestsArr.length < j)) {
+           if (requestsArr[j] !== undefined) {
                j++
                request(requestsArr[j].url, {
                    encoding: 'binary'
@@ -150,12 +150,12 @@
 С курсами почти тоже самое, что и с сотрудниками. Берем первый попавшийся сайт с каталогом курсов и у которого есть API и переносим его в WebTutor.  Воспользуемся API [Udacity](https://www.udacity.com).
 
 1. Проходим по ссылке [https://www.udacity.com/public-api/v0/courses](https://www.udacity.com/public-api/v0/courses) и сохраняем содержимое страницы в файл `C:\filler\courses\courses.json`
-2. Создайте файл `C:\filler\courses\get-avatars.js`  с таким содержимым:
-   ```js
+2. Создайте файл `C:\filler\courses\get-avatars.js`  с таким содержимым:  
+
+```js
    'use strict'
    const request = require('request')
    const fs = require('fs')
-
    fs.readFile('courses.json', (err, coursesData) => {
        console.log('Start')
        if (!fs.existsSync('miniatures')) fs.mkdir('miniatures')
@@ -172,7 +172,59 @@
        }
        var j = 0
        var interval = setInterval(_ => {
-           if (!(requestsArr.length < j)) {
+           if (requestsArr[j] !== undefined) {
+               j++
+               request(requestsArr[j].url, {
+                   encoding: 'binary'
+               }, (error, response, body) => {
+                   fs.writeFile('miniatures/' + requestsArr[j].filename + '.jpg', body, 'binary', _ => {})
+                   console.log(+(j / (requestsArr.length / 100)).toFixed(2) + '%')
+               })
+           } else {
+               clearInterval(interval)
+               console.log('100% Complete')
+           }
+       }, 3000)
+   })
+```
+
+1. В командной строке вводим команды и ждем завершения скачивания изображений \(пока не будет написано 100% Complete\), займет это ~ 10 минут:
+
+   cd C:\filler\users + Enter  
+   npm install fs + Enter  
+   npm install request + Enter  
+   node get-miniatures.js + Enter
+
+2. Копируем файл  
+   `C:\filler\users\courses.json` в `C:\Program Files\WebSoft\WebTutorServer\wt\web`
+
+   папку `C:\filler\courses\miniatures` в `C:\Program Files\WebSoft\WebTutorServer\wt\web\assets\courses`
+
+3. В WebTutor Administrator в `Дизайнер` - `Агенты Сервера` запускаем такой код.
+
+   Создайте файл `C:\filler\courses\get-avatars.js`  с таким содержимым:
+
+   ```js
+   'use strict'
+   const request = require('request')
+   const fs = require('fs')
+   fs.readFile('courses.json', (err, coursesData) => {
+       console.log('Start')
+       if (!fs.existsSync('miniatures')) fs.mkdir('miniatures')
+       let data = JSON.parse(coursesData).courses
+       let requestsArr = []
+       let large, medium, thumbnail
+       for (let i of data) {
+           if (i.image !== '') {
+               requestsArr.push({
+                   "url": i.image,
+                   "filename": i.key
+               })
+           }
+       }
+       var j = 0
+       var interval = setInterval(_ => {
+           if (requestsArr[j] !== undefined) {
                j++
                request(requestsArr[j].url, {
                    encoding: 'binary'
@@ -187,14 +239,53 @@
        }, 3000)
    })
    ```
-3. В командной строке вводим команды и ждем завершения скачивания изображений \(пока не будет написано 100% Complete\), займет это ~ 10 минут:
 
-   cd C:\filler\users + Enter   
-   npm install fs + Enter   
-   npm install request + Enter   
-   node get-avatars.js + Enter
+4. В WebTutor Administrator в `Дизайнер` - `Агенты сервера` запускаем такой код.
 
+   ```js
+   var coursesObj = tools.read_object(LoadFileData(UrlToFilePath("x-local://wt/web/courses.json")), "json").courses
+   for (var i = 0; i < coursesObj.length; i++) {
+       if(coursesObj[i].image !== '') {
+       doc = tools.new_doc_by_name('course');
+       doc_Top = doc.course;
+       doc_Top.code = coursesObj[i].key
+       doc_Top.name = coursesObj[i].title
+       doc_Top.desc = coursesObj[i].summary
+       doc_Top.status = "publish"
+       doc_Top.disp_scrolling = true
+       doc_Top.resizable = false
+       doc_Top.parts.AddChild()
+       doc_Top.parts[0].code = doc_Top.code
+       doc_Top.parts[0].name = "Модуль - "+doc_Top.name
+       doc_Top.parts[0].type = "lesson"
+       doc_Top.parts[0].url = "webtutor/udacity-courses/"+doc_Top.code+".html"
+       course_redirect = "<script>window.location = '"+coursesObj[i].homepage+"'</script>"
+       PutFileData(UrlToFilePath('x-local://wt/web/webtutor/udacity-test-base-courses/'+doc_Top.code+'.html'), course_redirect)
+       doc_Top.parts[0].disp_scrolling = true
+       doc_Top.parts[0].resizable = true
+       doc_Top.parts[0].is_mandatory = true
+       doc_Top.parts[0].is_visible = true
+       doc_Top.parts[0].set_status_side = "course"
+       doc_Top.parts[0].score_factor = 1
+       doc_Top.parts[0].attempts_num = 1
+       doc_Top.mastery_score = 80
+       doc_Top.max_score = 100
+       doc_Top.score_sum_type = "score"
+       doc_Top.score_sum_eval = "score"
+       doc_Top.yourself_start = true
+       doc_Top.finish_without_mastery_score = true
+       doc_Top.auto_finish = true
+       doc_Top.ignor_location = false
+       doc_Top.start_after_finish = false
+       doc_Top.duration = 14
+       doc.BindToDb(DefaultDb)
+       doc.Save()
+       }
+   }
 
+   ```
+
+5. fgsdfg
 
 
 
