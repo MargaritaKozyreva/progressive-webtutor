@@ -94,16 +94,10 @@
 3. В WebTutor Administrator в `Дизайнер` - `Агенты Сервера` запускаем такой код.
 
    ```js
-   // Делаем из строки json javascript массив
    var usersObj = tools.read_object(LoadFileData(UrlToFilePath("x-local://wt/web/users.json")), "json")
-
-   // Пробегаемся по массиву с объектами содержащими данные пользователей и создаем записи в WebTutor
    for (var i = 0; i < usersObj.length; i++) {
-       // Создаем новый XML документ по указанному шаблону
        doc = tools.new_doc_by_name('collaborator')
        doc_Top = doc.collaborator
-
-       // Заполняем документ        
        if (usersObj[i].user.gender === "female") {
            doc_Top.sex = "w"
        } else {
@@ -123,7 +117,6 @@
        doc_Top.birth_date = "" + String(RawSecondsToDate(usersObj[i].user.dob))
        doc_Top.phone = usersObj[i].user.phone
        doc_Top.mobile_phone = usersObj[i].user.cell
-
        if(usersObj[i].user.gender === "male") {
            doc_Top.pict_url = "/avatars/"+StrReplace(usersObj[i].user.picture.medium, "http://randomuser.ru/images/men/med/", "")
            doc_Top.pict_url = StrReplace(doc_Top.pict_url, ".jpg", "-medium-m.jpg")
@@ -244,10 +237,11 @@
 
    ```js
    var coursesObj = tools.read_object(LoadFileData(UrlToFilePath("x-local://wt/web/courses.json")), "json").courses
+   ObtainDirectory('x-local://wt/web/webtutor/udacity-courses', true)
    for (var i = 0; i < coursesObj.length; i++) {
        if(coursesObj[i].image !== '') {
-       doc = tools.new_doc_by_name('course');
-       doc_Top = doc.course;
+       doc = tools.new_doc_by_name('course')
+       doc_Top = doc.course
        doc_Top.code = coursesObj[i].key
        doc_Top.name = coursesObj[i].title
        doc_Top.desc = coursesObj[i].summary
@@ -260,7 +254,7 @@
        doc_Top.parts[0].type = "lesson"
        doc_Top.parts[0].url = "webtutor/udacity-courses/"+doc_Top.code+".html"
        course_redirect = "<script>window.location = '"+coursesObj[i].homepage+"'</script>"
-       PutFileData(UrlToFilePath('x-local://wt/web/webtutor/udacity-test-base-courses/'+doc_Top.code+'.html'), course_redirect)
+       PutFileData(UrlToFilePath('x-local://wt/web/webtutor/udacity-courses/'+doc_Top.code+'.html'), course_redirect)
        doc_Top.parts[0].disp_scrolling = true
        doc_Top.parts[0].resizable = true
        doc_Top.parts[0].is_mandatory = true
@@ -282,10 +276,11 @@
        doc.Save()
        }
    }
-
    ```
 
-5. fgsdfg
+5. Удаляем файл `C:\filler\users\courses.json`
+
+6. Готово.
 
 
 

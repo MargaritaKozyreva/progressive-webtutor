@@ -1,4 +1,4 @@
-# ObtainDirectory()
+# ObtainDirectory\(\)
 
 ```js
 /**
@@ -12,3 +12,6 @@ function ObtainDirectory(path, isRecursive) {...}
 // Пример
 ObtainDirectory('x-local://wt/web/plugins/name/', true);
 ```
+
+
+
