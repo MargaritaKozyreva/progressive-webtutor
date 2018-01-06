@@ -1,4 +1,4 @@
-# Почему WebTutor?
+# ![](/assets/Untitled-3.psd)Почему WebTutor?
 
 WebTutor
 
@@ -12,8 +12,5 @@ WebTutor
 * более 1500 внедрений [системы E-Staff](http://websoft.ru/db/wb/root_id/e-staff/doc.html) \(модуля "Подбор персонала"\) в компаниях России и СНГ
 * более 1 000 000 человек регулярно используют порталы, построенные на основе [системы WebTutor](http://websoft.ru/db/wb/root_id/webtutor/doc.html)
 
-  
 [Подробнее о клиентах WebSoft](http://websoft.ru/db/wb/root_id/clients/doc.html)
-
-
 
