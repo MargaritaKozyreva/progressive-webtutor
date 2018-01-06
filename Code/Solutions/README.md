@@ -9,10 +9,9 @@
 | [Добавить настраиваемый веб-шаблон из раздела "Шаблоны документов" на страницу](#добавить-настраиваемый-веб-шаблон-из-раздела-шаблоны-документов-на-страницу) |
 | [Запрос на получение списка всех настраиваемых полей](#запрос-на-получение-списка-всех-настраиваемых-полей) |
 | [Отправить и создать клиентский файл на сервере](#отправить-и-создать-клиентский-файл-на-сервере) |
+| [Скопировать репозиторий с GitHub](#скопировать-репозиторий-с-github) |
 | [Некорректная работа в старых браузерах IE](#некорректная-работа-в-старых-браузерах-ie) |
 | [Отправка Email на произвольный адрес](#отправка-email-на-произвольный-адрес) |
-
-
 
 #### Добавить настраиваемый веб-шаблон из раздела "Шаблоны документов" на страницу.
 
@@ -94,6 +93,43 @@ function xhr(body) {
     }
 }
 </script>
+```
+
+  
+Отправка Email на произвольный адрес
+
+```js
+function _email(options) {
+    try {
+        var new_doc = tools.new_doc_by_name('active_notification')
+        var doc_topElem = new_doc.TopElem
+        doc_topElem.recipients.AddChild("recipient")
+        doc_topElem.recipients[0].address = options.email
+        doc_topElem.send_date = Date()
+        doc_topElem.is_custom = 1
+        doc_topElem.status = 'active'
+        doc_topElem.body_type = 'html'
+        doc_topElem.subject = options.subject
+        doc_topElem.body = options.body
+        new_doc.BindToDb(DefaultDb)
+        new_doc.Save()
+        return {}
+    }
+    catch (err) {
+        throw new Error('_email: ' + err.message)
+    }
+}
+```
+
+#### 
+
+#### Скопировать репозиторий с GitHub
+
+```js
+ObtainDirectory(UrlToFilePath('x-local://wt/web/repo')) 
+PutFileData(UrlToFilePath('x-local://wt/web/repo/new-repo-master.zip'), HttpRequest('https://github.com/maksimyurkov/new-repo/archive/master.zip').Body) 
+ZipExtract(UrlToFilePath('x-local://wt/web/repo/new-repo-master.zip'), 'x-local://wt/web/repo') 
+MoveFile(UrlToFilePath('x-local://wt/web/repo/new-repo-master'),UrlToFilePath('x-local://wt/web/repo')) DeleteFile(UrlToFilePath('x-local://wt/web/repo/new-repo-master.zip'))
 ```
 
 #### 
