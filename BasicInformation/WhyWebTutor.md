@@ -1,6 +1,6 @@
-# ![](/assets/Untitled-3.psd)Почему WebTutor?
+# Почему WebTutor?
 
-WebTutor
+Подробно узнать о WebTutor вы можете по ссылке [ссылке](http://websoft.ru/db/wb/root_id/webtutor/doc.html), здесь будет .
 
 Систему WebTutor используют:
 
