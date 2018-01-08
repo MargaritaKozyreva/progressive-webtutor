@@ -37,7 +37,55 @@
 | [Material Design](https://material.io/) |  |
 | [Capterra.com](http://www.capterra.com/learning-management-system-software/) |  |
 
+## Библиотеки для создания веб-компонент
+
+| Ссылки | Описание |
+| :--- | :--- |
+| [Polymer](https://www.polymer-project.org/) |  |
+| [X-Tag](https://x-tag.github.io/) |  |
+| [Bosonic](https://bosonic.github.io/) |  |
+| [SkateJS](https://github.com/skatejs/skatejs) |  |
+| [Slim.js](http://slimjs.com) |  |
+| [Stencil](https://stenciljs.com) |  |
+
+## Готовые веб-компоненты
+
+| Ссылка |  |
+| :--- | :--- |
+| [webcomponents.org](https://www.webcomponents.org) |  |
+| [Vaadin](https://vaadin.com/elements/browse) |  |
+| [Bosonic](https://bosonic.github.io/elements/dialogs-modals.html) |  |
+| [expand.js](https://expandjs.com/components) |  |
+|  |  |
+
+## О веб-компонентах
+
+| Ссылка |  |
+| :--- | :--- |
+| [Polymer](https://www.polymer-project.org/) |  |
+| [Bosonic](https://bosonic.github.io/index.html) |  |
+
+## Инкапсуляция без веб-компонент
+
+| Ссылка |  |
+| :--- | :--- |
+| [iframe-resizer](https://github.com/davidjbradshaw/iframe-resizer) |  |
+| [xcomponent](https://github.com/krakenjs/xcomponent) |  |
+| [Cleanslate](http://cleanslatecss.com/) |  |
+
+## Framework
+
+| Ссылка | Описание |
+| :--- | :--- |
+| [https://hnpwa.com/](https://hnpwa.com/) | Пример одного и того же приложения написанного используя нижеперечисленные фреймворки |
+| [Preact](https://preactjs.com/) |  |
+| [React](https://reactjs.org/) |  |
+| [Vue.js](https://vuejs.org/) |  |
+| [Polymer](/polymer-project.org) |  |
+| [Ember](https://www.emberjs.com/) |  |
+| [Next.js](https://learnnextjs.com/) |  |
+| [Angular](https://angular.io/) |  |
+| [Ionic](https://ionicframework.com/) \([stenciljs](https://stenciljs.com/)\) |  |
 
 
-Frame
 
