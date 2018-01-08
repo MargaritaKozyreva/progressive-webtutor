@@ -1,7 +1,6 @@
 {
     "plugins": [
-        "collapsible-chapters",
-        "advanced-emoji"
+        "collapsible-chapters"
     ],
     "pluginsConfig": {}
 }
