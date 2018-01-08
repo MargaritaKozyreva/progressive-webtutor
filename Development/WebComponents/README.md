@@ -2,6 +2,8 @@
 
 Сразу надо понять, веб-компоненты - это не какая-то очередная библиотека, это часть платформы\(браузера\), которая уже давно делается W3C\(~ c 2012 года\) и усиленно продвигается Google и используются во многих крупных компаниях в продакшн \(YouTube, Bloomberg, EA итд\). То есть как все это работает придется изучить, так как это уже настоящее и возможно будущее web.
 
+Чтобы иметь представление о чем речь, посмотрите [по ссылке](https://vaadin.com/elements/browse), что они из себя представляют.
+
 #### Спецификации
 
 В основе веб-компонент лежит четыре спецификации \(каждая может быть использована отдельно\):
@@ -14,11 +16,11 @@
 
 Инкапсуляции DOM и CSS
 
-3\) [ES6 Modules](https://html.spec.whatwg.org/multipage/webappapis.html#integration-with-the-javascript-module-system)
+3\) &lt;script type="module"&gt;
 
 Загрузка веб-компонент
 
-**Внимание! **Раньше для этого использовался [HTML imports](https://w3c.github.io/webcomponents/spec/imports/). Но в 2017 было решено использовать ES6 Modules. Вы будете частенько встречать метод загрузки через HTML imports\(тег `<link rel="import">`\) его работу будут поддерживать еще несколько лет.
+**Внимание! **Раньше для этого использовался [HTML imports](https://w3c.github.io/webcomponents/spec/imports/)\(`<link rel="import">`\). Но в 2017 было решено использовать ES6 Modules. Вы будете частенько встречать метод загрузки через HTML imports, его работу будут поддерживать еще несколько лет.
 
 4\) [HTML Template](https://html.spec.whatwg.org/multipage/scripting.html#the-template-element/)
 
