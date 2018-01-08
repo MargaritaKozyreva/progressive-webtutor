@@ -1,6 +1,10 @@
 # WebTutor
 
-Подробно узнать о WebTutor вы можете по ссылке [ссылке](http://websoft.ru/db/wb/root_id/webtutor/doc.html).
+Общая информация о WebTutor доступна на сайте WebSoft по [ссылке](http://websoft.ru/db/wb/root_id/webtutor/doc.html). 
+
+---
+
+[Архитектура системы](https://www.gitbook.com/book/maksimyurkov/progressive-webtutor/edit#)
 
 WebTutor работает на платформе [SP-XML](http://docs.datex.ru/article.htm?id=5620276905286592644).
 
@@ -20,8 +24,6 @@ _JavaScript, XQuery, XAML_
 Единственное, без чего обычно нельзя обойтись при разработке в WebTutor это серверный JavaScript.
 
 У вас возможно сразу возник вопрос, что за серверный JavaScript, какая версия? ES6? это Node.js?
-
-Все не то.
 
 Помню наткнулся на форуме на один комментарий от Фирсова Андрея , который отлично дает ответ на вопросы по поводу серверной части:
 
