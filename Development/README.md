@@ -7,7 +7,8 @@
 | WebTutor |
 | Web components |
 | WebTutor и Web components |
-|  |
+| Создание веб-компоненты |
+| Добавляем компоненту на портал |
 
 
 
