@@ -25,18 +25,6 @@
 | [FAQ WebSoft](http://news.websoft.ru/view_doc.html?mode=doc&doc_id=5900009198344233423) | FAQ содержит разбитые по разделам ссылки до страниц в которых можно встретить полезную для разработки в WebTutor информацию. |
 | [Документация по WebTutor](http://news.websoft.ru/view_doc.html?mode=doc_type&object_id=5486421379493803019&doc_id=5900009198344233385&section_id=5903427210833450983) | Данный раздел будет полезен тем кто никогда раньше не работал с подобной системой. Здесь находится документация описывающая функционал системы в вебе и в интерфейсе WebTutor Administrator. |
 
-## Для развития
-
-| Ссылки |  |
-| :--- | :--- |
-| [Google Developers](https://developers.google.com/web/updates/2017/) |  |
-| [Udacity](https://www.udacity.com/courses/web-development) | [Browser Rendering Optimization](https://www.udacity.com/course/browser-rendering-optimization--ud860), [Website Performance Optimization](https://www.udacity.com/course/website-performance-optimization--ud884), [Responsive Web Design Fundamentals](https://www.udacity.com/course/responsive-web-design-fundamentals--ud893), [Client-Server Communication](https://www.udacity.com/course/client-server-communication--ud897), [Responsive Images](https://www.udacity.com/course/responsive-images--ud882) |
-| [Google Developers Codelabs](https://codelabs.developers.google.com/) |  |
-| [YouTube ChromeDevelopers](https://www.youtube.com/user/ChromeDevelopers/videos) |  |
-| [Firebase](https://firebase.google.com/) |  |
-| [Material Design](https://material.io/) |  |
-| [Capterra.com](http://www.capterra.com/learning-management-system-software/) |  |
-
 ## Библиотеки для создания веб-компонент
 
 | Ссылки | Описание |
@@ -56,7 +44,18 @@
 | [Vaadin](https://vaadin.com/elements/browse) |  |
 | [Bosonic](https://bosonic.github.io/elements/dialogs-modals.html) |  |
 | [expand.js](https://expandjs.com/components) |  |
-|  |  |
+
+## Для развития
+
+| Ссылки |  |
+| :--- | :--- |
+| [Google Developers](https://developers.google.com/web/updates/2017/) |  |
+| [Udacity](https://www.udacity.com/courses/web-development) | [Browser Rendering Optimization](https://www.udacity.com/course/browser-rendering-optimization--ud860), [Website Performance Optimization](https://www.udacity.com/course/website-performance-optimization--ud884), [Responsive Web Design Fundamentals](https://www.udacity.com/course/responsive-web-design-fundamentals--ud893), [Client-Server Communication](https://www.udacity.com/course/client-server-communication--ud897), [Responsive Images](https://www.udacity.com/course/responsive-images--ud882) |
+| [Google Developers Codelabs](https://codelabs.developers.google.com/) |  |
+| [YouTube ChromeDevelopers](https://www.youtube.com/user/ChromeDevelopers/videos) |  |
+| [Firebase](https://firebase.google.com/) |  |
+| [Material Design](https://material.io/) |  |
+| [Capterra.com](http://www.capterra.com/learning-management-system-software/) |  |
 
 ## О веб-компонентах
 
@@ -73,7 +72,7 @@
 | [xcomponent](https://github.com/krakenjs/xcomponent) |  |
 | [Cleanslate](http://cleanslatecss.com/) |  |
 
-## Framework
+## Frameworks
 
 | Ссылка | Описание |
 | :--- | :--- |
