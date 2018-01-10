@@ -18,7 +18,7 @@
 
 Инкапсуляции DOM и CSS
 
-3\) &lt;script type="module"&gt;
+3\) [&lt;script type="module"&gt;](https://jakearchibald.com/2017/es-modules-in-browsers/)
 
 Загрузка веб-компонент
 
