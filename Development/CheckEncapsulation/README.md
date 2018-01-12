@@ -162,9 +162,40 @@ customElements.define('my-clock', MyClock)
 
 Впринципе такой вариант с частичной инкапсуляцией тоже неплохой и позволяет делать внутри своей веб-компоненты все, что угодно с CSS не боясь, что это будет воздействовать на окружение, но хочется, чтобы никакие стили снаружи не попадали в веб-компоненту.
 
-В интернете готового решения данной проблемы найти не удалось.\(если кто знает напишите мне\) 
+В интернете готового решения данной проблемы найти не удалось.\(если кто знает напишите мне\)
 
-В итоге я наткнулся на библиотеку [Cleanslate](https://github.com/premasagar/cleanslate) и реализовал свой "костыль", который вроде как работает и стили удается инкапсулировать.
+В итоге я наткнулся на библиотеку [Cleanslate](https://github.com/premasagar/cleanslate) и реализовал свой "костыль", который вроде как работает и стили снаружи в веб-компоненту не попадают. Точнее стили снаружи попадают, но [Cleanslate](https://github.com/premasagar/cleanslate) их перезатирает.
+
+### Добавляем поддержку Cleanslate
+
+В командной строке пишем
+
+`npm install cleanslate` + Enter
+
+В index.html делаем вот так
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="cleanslate.css">
+    <script src="/node_modules/@webcomponents/webcomponentsjs/webcomponents-lite.js"></script>
+    <script type="module" src="/my-clock.js"></script>
+    <script nomodule src="/my-clock.js"></script>
+    <style>
+    h2 {
+        text-decoration: underline;
+    }
+    </style>
+</head>
+<body>
+    <h2>Привет! Я заголовок снаружи Shadow DOM!</h2>
+    <my-clock></my-clock>
+</body>
+</html>
+```
 
 
 
