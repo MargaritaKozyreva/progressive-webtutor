@@ -240,7 +240,7 @@ customElements.define('my-clock', MyClock)
 * Добавили тегу h2 `class="cleanslate"`
 * Добавили все стилям `!important`
 
-Смотрим результат:![](/assets/4.jpg)Теперь все ок.
+Смотрим результат:![](/Development/CheckEncapsulation/4.jpg)Теперь все ок.
 
 ## Выводы
 
