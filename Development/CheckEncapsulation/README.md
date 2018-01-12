@@ -166,7 +166,7 @@ customElements.define('my-clock', MyClock)
 
 В интернете готового решения данной проблемы найти не удалось.\(если кто знает напишите мне\)
 
-В итоге я наткнулся на библиотеку [Cleanslate](https://github.com/premasagar/cleanslate) и реализовал свой "костыль", который вроде как работает и стили снаружи в веб-компоненту не попадают. Точнее стили снаружи попадают, но [Cleanslate](https://github.com/premasagar/cleanslate) их перезатирает.
+В итоге я наткнулся на библиотеку [Cleanslate](https://github.com/premasagar/cleanslate) и реализовал свой "костыль", который вроде как работает и стили снаружи в веб-компоненту не попадают. Если вкратце, то вы добавляете элементу класс `cleanslate`, который устанавливает элементу стили по умолчанию перезатирая существующие.
 
 ### Добавляем поддержку Cleanslate
 
@@ -199,6 +199,10 @@ customElements.define('my-clock', MyClock)
 </html>
 ```
 
+Что мы изменили:
+
+* Добавили стили `<link rel="stylesheet" href="node_modules/cleanslate/cleanslate.css">`
+
 В my-clock.js делаем вот так
 
 ```js
@@ -230,6 +234,17 @@ class MyClock extends HTMLElement {
 
 customElements.define('my-clock', MyClock)
 ```
+
+Что мы изменили:
+
+* Добавили тегу h2 `class="cleanslate"`
+* Добавили все стилям `!important`
+
+Смотрим результат:![](/assets/4.jpg)Теперь все ок.
+
+## Выводы
+
+
 
 
 
