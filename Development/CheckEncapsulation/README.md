@@ -35,7 +35,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <script type="module" src="/my-clock.js"></script>
+    <script type="module" src="my-clock.js"></script>
     <style>
     h2 {
         text-decoration: underline;
@@ -66,6 +66,7 @@ class MyClock extends HTMLElement {
                 padding: 8px 16px;
                 font-family:'Roboto';
                 font-weight: 300;
+                font-size: 1.5em;
             }
         </style>
         <h2>Привет! Я заголовок внутри Shadow DOM!</h2>
@@ -100,9 +101,9 @@ customElements.define('my-clock', MyClock)
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <script src="/node_modules/@webcomponents/webcomponentsjs/webcomponents-lite.js"></script>
-    <script type="module" src="/my-clock.js"></script>
-    <script nomodule src="/my-clock.js"></script>
+    <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-lite.js"></script>
+    <script type="module" src="my-clock.js"></script>
+    <script nomodule src="my-clock.js"></script>
     <style>
     h2 {
         text-decoration: underline;
@@ -125,22 +126,23 @@ customElements.define('my-clock', MyClock)
 
 ```js
 'use strict'
-let template = document.createElement('template')
-template.innerHTML = `
-<style>
-    h2 {
-        color: maroon;
-        border-left: 3px solid maroon;
-        padding: 8px 16px;
-        font-family:'Roboto';
-        font-weight: 300;
-    }
-</style>
-<h2>Привет! Я заголовок внутри Shadow DOM!</h2>
-`
 ShadyCSS.prepareTemplate(template, 'my-clock')
 class MyClock extends HTMLElement {
     connectedCallback() {
+        let template = document.createElement('template')
+        template.innerHTML = `
+        <style>
+            h2 {
+                color: maroon;
+                border-left: 3px solid maroon;
+                padding: 8px 16px;
+                font-family:'Roboto';
+                font-weight: 300;
+                font-size: 1.5em;
+            }
+        </style>
+        <h2>Привет! Я заголовок внутри Shadow DOM!</h2>
+        `
         ShadyCSS.styleElement(this)
         this.attachShadow({
             mode: 'open'
@@ -180,10 +182,10 @@ customElements.define('my-clock', MyClock)
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link rel="stylesheet" href="cleanslate.css">
-    <script src="/node_modules/@webcomponents/webcomponentsjs/webcomponents-lite.js"></script>
-    <script type="module" src="/my-clock.js"></script>
-    <script nomodule src="/my-clock.js"></script>
+    <link rel="stylesheet" href="node_modules/cleanslate/cleanslate.css">
+    <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-lite.js"></script>
+    <script type="module" src="my-clock.js"></script>
+    <script nomodule src="my-clock.js"></script>
     <style>
     h2 {
         text-decoration: underline;
@@ -195,6 +197,38 @@ customElements.define('my-clock', MyClock)
     <my-clock></my-clock>
 </body>
 </html>
+```
+
+В my-clock.js делаем вот так
+
+```js
+'use strict'
+class MyClock extends HTMLElement {
+    connectedCallback() {
+        let template = document.createElement('template')
+        template.innerHTML = `
+        <style>
+            h2 {
+                color: maroon !important;
+                border-left: 3px solid maroon !important;
+                padding: 8px 16px !important;
+                font-family:'Roboto' !important;
+                font-weight: 300 !important;
+                font-size: 1.5em !important;
+            }
+        </style>
+        <h2 class="cleanslate">Привет! Я заголовок внутри Shadow DOM!</h2>
+        `
+        ShadyCSS.prepareTemplate(template, 'my-clock')
+        ShadyCSS.styleElement(this)
+        this.attachShadow({
+            mode: 'open'
+        })
+        this.shadowRoot.appendChild(document.importNode(template.content, true))
+    }
+}
+
+customElements.define('my-clock', MyClock)
 ```
 
 
