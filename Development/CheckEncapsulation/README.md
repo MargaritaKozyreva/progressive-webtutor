@@ -2,6 +2,8 @@
 
 Проверим действительно ли все так, как написано в спецификации веб-компонент и их DOM c CSS инкапсулированы.
 
+Создадим веб-компоненту, которая будет представлять из себя измененный заголовок `<h2>`.
+
 Для этого понадобится текстовый редактор и [Node.js](https://nodejs.org/en/).
 
 В командной строке:
@@ -14,9 +16,9 @@
 
 `cd C:\` + Enter
 
-`mkdir check-incapsulation` + Enter
+`mkdir my-h2` + Enter
 
-`cd check-incapsulation` + Enter
+`cd my-h2` + Enter
 
 Запускаем сервер
 
@@ -35,7 +37,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <script type="module" src="my-clock.js"></script>
+    <script type="module" src="my-h2.js"></script>
     <style>
     h2 {
         text-decoration: underline;
@@ -45,17 +47,17 @@
 
 <body>
     <h2>Привет! Я заголовок снаружи Shadow DOM!</h2>
-    <my-clock></my-clock>
+    <my-h2></my-h2>
 </body>
 
 </html>
 ```
 
-и my-clock.js с таким
+и my-h2.js с таким
 
 ```js
 'use strict'
-class MyClock extends HTMLElement {
+class MyH2 extends HTMLElement {
     connectedCallback() {
         let template = document.createElement('template')
         template.innerHTML = `
@@ -78,7 +80,7 @@ class MyClock extends HTMLElement {
     }
 }
 
-customElements.define('my-clock', MyClock)
+customElements.define('my-h2', MyH2)
 ```
 
 Смотрим результат в Chrome![](/Development/CheckEncapsulation/1.jpg)Супер! Все работает как и задумано. CSS снаружи веб-компоненты не попадает в нее, а CSS внутри не выходит наружу.
@@ -102,8 +104,8 @@ customElements.define('my-clock', MyClock)
     <meta charset="UTF-8">
     <title>Document</title>
     <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-lite.js"></script>
-    <script type="module" src="my-clock.js"></script>
-    <script nomodule src="my-clock.js"></script>
+    <script type="module" src="my-h2.js"></script>
+    <script nomodule src="my-h2.js"></script>
     <style>
     h2 {
         text-decoration: underline;
@@ -112,22 +114,22 @@ customElements.define('my-clock', MyClock)
 </head>
 <body>
     <h2>Привет! Я заголовок снаружи Shadow DOM!</h2>
-    <my-clock></my-clock>
+    <my-h2></my-h2>
 </body>
 </html>
 ```
 
 Что мы изменили:
 
-* Добавили на страницу скрипт webcomponents-lite.js, который добавит все необходимые полифиллы. Все будет работать, но добавил я webcomponents-lite.js только в демонстрационных целях. В реальных проектах такого делать не стоит. У webcomponentsjs довольно много возможностей загрузки. Во первых надо загружать асинхронно и загружать, только те полифиллы, которые будут необходимы, а не все, как это сделано сейчас. Подробности, как это делается, почитать на странице полифилла [webcomponentsjs](https://github.com/webcomponents/webcomponentsjs).
-* Добавили `<script nomodule src="/my-clock.js"></script>`. Так как IE11 не знает, что такое `type="module"`, он это загружать не будет. А вот скрипт с `nomodule` загрузит. Современные же браузеры с поддержкой импорта модулей будут делать наоборот. Подробности можете почитать [тут](https://jakearchibald.com/2017/es-modules-in-browsers#nomodule-for-backwards-compatibility).
+* Добавили на страницу скрипт webcomponents-lite.js, который добавит все необходимые полифиллы. Все будет работать, но добавил я webcomponents-lite.js только в демонстрационных целях. В реальных проектах такого делать не стоит. У webcomponentsjs довольно много возможностей загрузки. Во первых надо загружать асинхронно и загружать, только те полифиллы, которые будут необходимы, а не все, как это сделано сейчас. Подробности того, как это делается на странице полифилла [webcomponentsjs](https://github.com/webcomponents/webcomponentsjs).
+* Добавили `<script nomodule src="/my-h2.js"></script>`. Так как IE11 не знает, что такое `type="module"`, он это загружать не будет. А вот скрипт с `nomodule` загрузит. Современные же браузеры с поддержкой импорта модулей будут делать наоборот. Подробности можете почитать [тут](https://jakearchibald.com/2017/es-modules-in-browsers#nomodule-for-backwards-compatibility).
 
-В my-clock.js делаем вот так
+В my-h2.js делаем вот так
 
 ```js
 'use strict'
-ShadyCSS.prepareTemplate(template, 'my-clock')
-class MyClock extends HTMLElement {
+ShadyCSS.prepareTemplate(template, 'my-h2')
+class MyH2 extends HTMLElement {
     connectedCallback() {
         let template = document.createElement('template')
         template.innerHTML = `
@@ -151,7 +153,7 @@ class MyClock extends HTMLElement {
     }
 }
 
-customElements.define('my-clock', MyClock)
+customElements.define('my-h2', MyH2)
 ```
 
 Что мы изменили:
@@ -184,8 +186,8 @@ customElements.define('my-clock', MyClock)
     <title>Document</title>
     <link rel="stylesheet" href="node_modules/cleanslate/cleanslate.css">
     <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-lite.js"></script>
-    <script type="module" src="my-clock.js"></script>
-    <script nomodule src="my-clock.js"></script>
+    <script type="module" src="my-h2.js"></script>
+    <script nomodule src="my-h2.js"></script>
     <style>
     h2 {
         text-decoration: underline;
@@ -203,11 +205,11 @@ customElements.define('my-clock', MyClock)
 
 * Добавили стили `<link rel="stylesheet" href="node_modules/cleanslate/cleanslate.css">`
 
-В my-clock.js делаем вот так
+В my-h2.js делаем вот так
 
 ```js
 'use strict'
-class MyClock extends HTMLElement {
+class MyH2 extends HTMLElement {
     connectedCallback() {
         let template = document.createElement('template')
         template.innerHTML = `
@@ -223,7 +225,7 @@ class MyClock extends HTMLElement {
         </style>
         <h2 class="cleanslate">Привет! Я заголовок внутри Shadow DOM!</h2>
         `
-        ShadyCSS.prepareTemplate(template, 'my-clock')
+        ShadyCSS.prepareTemplate(template, 'my-h2')
         ShadyCSS.styleElement(this)
         this.attachShadow({
             mode: 'open'
@@ -232,7 +234,7 @@ class MyClock extends HTMLElement {
     }
 }
 
-customElements.define('my-clock', MyClock)
+customElements.define('my-H2', MyH2)
 ```
 
 Что мы изменили:
