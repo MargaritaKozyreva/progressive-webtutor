@@ -2,7 +2,7 @@
 
 Проверим действительно ли все так, как написано в спецификации веб-компонент и их DOM c CSS инкапсулированы.
 
-Создадим простенькую веб-компоненту, которая будет представлять из себя измененный заголовок `<h2>`.
+Создадим простенькую веб-компоненту, которая будет представлять из себя измененный заголовок `<h1>` и попытаемся воздействовать на нее извне.
 
 Для этого понадобится текстовый редактор и [Node.js](https://nodejs.org/en/).
 
@@ -10,25 +10,27 @@
 
 Установим сервер, который будем использовать во время разработки:
 
-`npm install polyserve -g` + Enter
+`npm install http-server -g` + Enter
 
-Создадим каталог в котором будем работать:
+Создадим каталог в котором будем:
 
 `cd C:\` + Enter
 
-`mkdir my-h2` + Enter
+`mkdir h1-sample` + Enter
 
-`cd my-h2` + Enter
+Входим в него
+
+`cd h1-sample` + Enter
 
 Запускаем сервер
 
-`polyserve` + Enter
+`http-server` + Enter
 
 ## Проверка в Chrome
 
 Сначала проверим как работает инкапсуляция в браузере где реализована поддержка всех четырех спецификаций веб-компонент.
 
-В каталоге `check-incapsulation` создадим файл index.html с таким содержимым
+В каталоге `h1-sample` создадим файл index.html с таким содержимым
 
 ```html
 <!DOCTYPE html>
@@ -36,42 +38,49 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
-    <script type="module" src="my-h2.js"></script>
+    <title>Incapsulation test</title>
+    <script type="module" src="h1-sample.js"></script>
     <style>
-    h2 {
+    h1 {
         text-decoration: underline;
     }
     </style>
 </head>
 
 <body>
-    <h2>Привет! Я заголовок снаружи Shadow DOM!</h2>
-    <my-h2></my-h2>
+    <h1>Привет! Я заголовок снаружи Shadow DOM!</h1>
+    <h1-sample>Привет! Я заголовок внутри Shadow DOM!</h1-sample>
 </body>
 
 </html>
 ```
 
-и my-h2.js с таким
+и h1-sample.js с таким
 
 ```js
 'use strict'
-class MyH2 extends HTMLElement {
+class H1Sample extends HTMLElement {
     connectedCallback() {
         let template = document.createElement('template')
         template.innerHTML = `
         <style>
-            h2 {
+            :host {
+                display: block;
+                position: relative;
+                box-sizing: border-box;  
+            }
+
+            h1 {
                 color: maroon;
                 border-left: 3px solid maroon;
                 padding: 8px 16px;
                 font-family:'Roboto';
                 font-weight: 300;
-                font-size: 1.5em;
+                font-size: 32px;
+                margin:0;
             }
         </style>
-        <h2>Привет! Я заголовок внутри Shadow DOM!</h2>
+        <h1><slot></slot></h1>
         `
         this.attachShadow({
             mode: 'open'
@@ -80,7 +89,7 @@ class MyH2 extends HTMLElement {
     }
 }
 
-customElements.define('my-h2', MyH2)
+customElements.define('h1-sample', H1Sample)
 ```
 
 Смотрим результат в Chrome![](/Development/CheckEncapsulation/1.jpg)Супер! Все работает как и задумано. CSS снаружи веб-компоненты не попадает в нее, а CSS внутри не выходит наружу.
@@ -89,7 +98,41 @@ customElements.define('my-h2', MyH2)
 
 А теперь попробуем тоже самое в браузере, который не поддерживает ни одной из четырех спецификаций веб-компонент.![](/Development/CheckEncapsulation/2.jpg)Ничего не работает. Попробуем подключить полифиллы, которые добавят поддержку необходимых спецификаций.
 
-Все необходимые полифиллы находятся в модуле [webcomponentsjs](https://github.com/webcomponents/webcomponentsjs). Установим его.
+Все необходимые полифиллы для осуществления поддержки веб-компонент находятся в модуле [webcomponentsjs](https://github.com/webcomponents/webcomponentsjs). 
+
+Сразу скажу, что если его подключить, то IE11 это не поможет...
+
+Для работы веб-компонент, браузер должен поддерживать ES6 \(а именно ES6 classes,  которые нужны для Custom Elements\).
+
+Проблема в том, что IE11 поддерживает только ES5, в отличие от последних версий Chrome, Firefox, Safari, Edge, Opera и др., которые поддерживают ES6.
+
+В итоге, чтобы наша компонента заработала в IE11, необходимо как-то скомпилировать код нашей компоненты в файле h1-sample.js из ES6 в версии в ES5. В подобной компиляции поможет Babel.
+
+#### Babel
+
+Если вкратце, то Babel незаменимая вещь
+
+
+
+
+
+
+
+Одна из спецификаций веб-компонентСогласно спецификации, одпользовательские элементы должны быть классами ES6 \(https://html.spec.whatwg.org/multipage/scripting.html\#custom-element-conformance\). Поскольку большинство проектов должны поддерживать широкий спектр браузеров, которые не нуждаются в поддержке ES6, может быть целесообразно скомпилировать ваш проект на ES5.
+
+Проблема в том, что IE11 поддерживает ES5, в отличие от последних версий Chrome, Firefox, Safari, Edge, Opera и др., которые поддерживают ES6.
+
+
+
+ npm install babel-preset-env
+
+npm install babel-preset-es2015 --save-dev
+
+
+
+
+
+
 
 В командной строке пишем
 
@@ -253,4 +296,8 @@ customElements.define('my-H2', MyH2)
 В браузерах где поддержки пока нет или она реализована частично, необходимо использовать полифиллы, но даже с ними инкапсуляция получается частичная.
 
 Стоит отметить, что тут полифиллы использовались для IE11, который не поддерживает ни одной спецификации веб-компонент. С другими браузерами проблем будет меньше, так как там что-то да поддерживается + в недалеком будущем, необходимость использования полфиллов полностью пропадет.
+
+# Практика
+
+
 
