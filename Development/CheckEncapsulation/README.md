@@ -120,17 +120,9 @@ customElements.define('h1-sample', H1Sample)
 
 `babel --presets es2015 h1-sample.js -o h1-sample-compiled.js` + Enter
 
+Он компилирует последние версии JavaScript в ES5. Он дает возможность писать код используя последние версии JavaScript, Он к примеру может компилировать код из ES6 в ES5, добавлять поддержку различных полифиллов
 
-
-
-
-
-
-
-
-Он компилирует последние версии JavaScript в ES5. Он дает возможность писать код используя последние версии JavaScript, Он к примеру может компилировать код из ES6 в ES5, добавлять поддержку различных полифиллов 
-
-Одна из спецификаций веб-компонентСогласно спецификации, одпользовательские элементы должны быть классами ES6 \([https://html.spec.whatwg.org/multipage/scripting.html\#custom-element-conformance\](https://html.spec.whatwg.org/multipage/scripting.html#custom-element-conformance\)\). Поскольку большинство проектов должны поддерживать широкий спектр браузеров, которые не нуждаются в поддержке ES6, может быть целесообразно скомпилировать ваш проект на ES5.
+Одна из спецификаций веб-компонентСогласно спецификации, одпользовательские элементы должны быть классами ES6 \([https://html.spec.whatwg.org/multipage/scripting.html\#custom-element-conformance\](https://html.spec.whatwg.org/multipage/scripting.html#custom-element-conformance%29\). Поскольку большинство проектов должны поддерживать широкий спектр браузеров, которые не нуждаются в поддержке ES6, может быть целесообразно скомпилировать ваш проект на ES5.
 
 Проблема в том, что IE11 поддерживает ES5, в отличие от последних версий Chrome, Firefox, Safari, Edge, Opera и др., которые поддерживают ES6.
 
