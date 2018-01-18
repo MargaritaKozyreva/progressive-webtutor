@@ -98,23 +98,106 @@ customElements.define('h1-sample', H1Sample)
 
 А теперь попробуем тоже самое в браузере, который не поддерживает ни одной из четырех спецификаций веб-компонент.![](/Development/CheckEncapsulation/2.jpg)Ничего не работает. Попробуем подключить полифиллы, которые добавят поддержку необходимых спецификаций.
 
-Все необходимые полифиллы для осуществления поддержки веб-компонент находятся в модуле [webcomponentsjs](https://github.com/webcomponents/webcomponentsjs).
+Все 4 необходимых полифилла для осуществления поддержки веб-компонент находятся в модуле [webcomponentsjs](https://github.com/webcomponents/webcomponentsjs).
 
-Сразу скажу, что если его подключить, то IE11 это не поможет...
+В командной строке пишем
+
+`npm install @webcomponents/webcomponentsjs` + Enter
+
+В index.html делаем вот так
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Incapsulation test</title>
+    <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-lite.js"></script>
+    <script type="module" src="h1-sample.js"></script>
+    <script nomodule src="h1-sample-compiled.js"></script>
+    <style>
+    h1 {
+        text-decoration: underline;
+    }
+    </style>
+</head>
+
+<body>
+    <h1>Привет! Я заголовок снаружи Shadow DOM!</h1>
+    <h1-sample>Привет! Я заголовок внутри Shadow DOM!</h1-sample>
+</body>
+
+</html>
+
+```
+
+Что мы изменили:
+
+* Добавили на страницу скрипт webcomponents-lite.js, который добавит все необходимые полифиллы. Все будет работать, но добавил я webcomponents-lite.js только в демонстрационных целях. В реальных проектах такого делать не стоит. У webcomponentsjs довольно много возможностей загрузки. Во первых надо загружать асинхронно и загружать, только те полифиллы, которые будут необходимы, а не все, как это сделано сейчас. Подробности того, как это делается на странице полифилла [webcomponentsjs](https://github.com/webcomponents/webcomponentsjs).
+* Добавили `<script nomodule src="/my-h2-compiled.js"></script>`. Так как IE11 не знает, что такое `type="module"`, он это загружать не будет. А вот скрипт с `nomodule` загрузит. Современные же браузеры с поддержкой импорта модулей будут делать наоборот. Подробности можете почитать [тут](https://jakearchibald.com/2017/es-modules-in-browsers#nomodule-for-backwards-compatibility). 
+  А вот что такое `h1-sample-compiled.js` будет рассказано чуть ниже.
+
+В my-h2.js делаем вот так
+
+```js
+'use strict'
+class H1Sample extends HTMLElement {
+    connectedCallback() {
+        let template = document.createElement('template')
+        template.innerHTML = `
+        <style>
+            :host {
+                display: block;
+                position: relative;
+                box-sizing: border-box;  
+            }
+
+            h1 {
+                color: maroon;
+                border-left: 3px solid maroon;
+                padding: 8px 16px;
+                font-family:'Roboto';
+                font-weight: 300;
+                font-size: 32px;
+                margin:0;
+            }
+        </style>
+        <h1><slot></slot></h1>
+        `
+        ShadyCSS.prepareTemplate(template, 'h1-sample')
+        ShadyCSS.styleElement(this)
+        this.attachShadow({
+            mode: 'open'
+        })
+        this.shadowRoot.appendChild(document.importNode(template.content, true))
+    }
+}
+
+customElements.define('h1-sample', H1Sample)
+```
+
+Что мы изменили:
+
+* Добавили пару строчек кода, тем самым осуществили частичную поддержку ShadowDOM и частичную инкапсуляцию CSS с помощью полифиллов [ShadyDOM](https://github.com/webcomponents/shadydom) и [ShadyCSS](https://github.com/webcomponents/shadycss) \(данные полифиллы уже встроены в webcomponentsjs не надо их отдельно подгружать\)
+
+Мы сделали все необходимое для работы веб-компонент в браузерах где пока нет их поддержки. 
+
+Данный вариант будет работать в Chrome, Firefox, Safari, Edge, Opera и др., вообщем почти во всех самых популярных браузерах, кроме IE11...
 
 Для работы веб-компонент, браузер должен поддерживать ES6 \(а именно ES6 classes,  которые нужны для Custom Elements\).
 
-Проблема в том, что IE11 поддерживает только ES5, в отличие от последних версий Chrome, Firefox, Safari, Edge, Opera и др., которые поддерживают ES6.
+Проблема в том, что IE11 поддерживает только ES5, в отличие от других наиболее популярных браузеров, которые поддерживают ES6.
 
-В итоге, чтобы наша компонента заработала в IE11, необходимо как-то скомпилировать код нашей компоненты в файле h1-sample.js из ES6 в версии в ES5. В подобной компиляции поможет [Babel](https://babeljs.io).
+В итоге, чтобы наша компонента заработала в IE11, необходимо как-то скомпилировать код нашей компоненты в файле h1-sample.js из ES6 в ES5. В подобной компиляции поможет [Babel](https://babeljs.io).
 
 #### Babel
 
-[Babel](https://babeljs.io) - это компилятор JavaScript. Он позволяет использовать новый синтаксис JavaScript прямо сейчас, не дожидаясь пока браузеры осуществят полную поддержку. Также с его помощью можно добавлять в код необходимые вам полифиллы. Можете встроить его в свою сборку проекта.  Babel может много чего еще, ищите подробности сайте [Babel](https://babeljs.io), чрезвычайно полезная вещь.
+[Babel](https://babeljs.io) - это компилятор JavaScript. Он позволяет использовать новый синтаксис JavaScript прямо сейчас, не дожидаясь пока браузеры осуществят полную поддержку. Также с его помощью можно добавлять в код необходимые вам полифиллы. Можете встроить его в свою сборку проекта. Babel может много чего еще, ищите подробности на сайте [Babel](https://babeljs.io), чрезвычайно полезная и крутая штука.
 
 В нашем ситуации, нам понадобится только компиляция ES6 в ES5.
 
-Установим Babel \(пишем в открытой командной строке\):
+Установим Babel \(пишем в нашей командной строке\):
 
 `babel-preset-es2015` + Enter
 
@@ -130,74 +213,7 @@ npm install babel-preset-env
 
 npm install babel-preset-es2015 --save-dev
 
-В командной строке пишем
 
-`npm install @webcomponents/webcomponentsjs` + Enter
-
-В index.html делаем вот так
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-lite.js"></script>
-    <script type="module" src="my-h2.js"></script>
-    <script nomodule src="my-h2.js"></script>
-    <style>
-    h2 {
-        text-decoration: underline;
-    }
-    </style>
-</head>
-<body>
-    <h2>Привет! Я заголовок снаружи Shadow DOM!</h2>
-    <my-h2></my-h2>
-</body>
-</html>
-```
-
-Что мы изменили:
-
-* Добавили на страницу скрипт webcomponents-lite.js, который добавит все необходимые полифиллы. Все будет работать, но добавил я webcomponents-lite.js только в демонстрационных целях. В реальных проектах такого делать не стоит. У webcomponentsjs довольно много возможностей загрузки. Во первых надо загружать асинхронно и загружать, только те полифиллы, которые будут необходимы, а не все, как это сделано сейчас. Подробности того, как это делается на странице полифилла [webcomponentsjs](https://github.com/webcomponents/webcomponentsjs).
-* Добавили `<script nomodule src="/my-h2.js"></script>`. Так как IE11 не знает, что такое `type="module"`, он это загружать не будет. А вот скрипт с `nomodule` загрузит. Современные же браузеры с поддержкой импорта модулей будут делать наоборот. Подробности можете почитать [тут](https://jakearchibald.com/2017/es-modules-in-browsers#nomodule-for-backwards-compatibility).
-
-В my-h2.js делаем вот так
-
-```js
-'use strict'
-ShadyCSS.prepareTemplate(template, 'my-h2')
-class MyH2 extends HTMLElement {
-    connectedCallback() {
-        let template = document.createElement('template')
-        template.innerHTML = `
-        <style>
-            h2 {
-                color: maroon;
-                border-left: 3px solid maroon;
-                padding: 8px 16px;
-                font-family:'Roboto';
-                font-weight: 300;
-                font-size: 1.5em;
-            }
-        </style>
-        <h2>Привет! Я заголовок внутри Shadow DOM!</h2>
-        `
-        ShadyCSS.styleElement(this)
-        this.attachShadow({
-            mode: 'open'
-        })
-        this.shadowRoot.appendChild(document.importNode(template.content, true))
-    }
-}
-
-customElements.define('my-h2', MyH2)
-```
-
-Что мы изменили:
-
-* Добавили пару строчек кода, тем самым осуществили частичную поддержку ShadowDOM и частичную инкапсуляцию CSS с помощью полифиллов [ShadyDOM](https://github.com/webcomponents/shadydom) и [ShadyCSS](https://github.com/webcomponents/shadycss) \(данные полифиллы уже встроены в webcomponentsjs не надо их отдельно подгружать\)
 
 Смотрим результат:
 
@@ -292,8 +308,4 @@ customElements.define('my-H2', MyH2)
 В браузерах где поддержки пока нет или она реализована частично, необходимо использовать полифиллы, но даже с ними инкапсуляция получается частичная.
 
 Стоит отметить, что тут полифиллы использовались для IE11, который не поддерживает ни одной спецификации веб-компонент. С другими браузерами проблем будет меньше, так как там что-то да поддерживается + в недалеком будущем, необходимость использования полфиллов полностью пропадет.
-
-# Практика
-
-
 
