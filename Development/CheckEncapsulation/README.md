@@ -184,7 +184,7 @@ customElements.define('h1-sample', H1Sample)
 
 Данный вариант будет работать в Chrome, Firefox, Safari, Edge, Opera и др., вообщем почти во всех самых популярных браузерах, кроме IE11...
 
-Для работы веб-компонент, браузер должен поддерживать ES6 \(а именно ES6 classes,  которые нужны для Custom Elements\).
+Помимо добаваления полифиллов, для работы веб-компонент, браузер должен поддерживать ES6 \(а именно ES6 classes,  которые нужны для Custom Elements\).
 
 Проблема в том, что IE11 поддерживает только ES5, в отличие от других наиболее популярных браузеров, которые поддерживают ES6.
 
@@ -294,7 +294,7 @@ customElements.define('h1-sample', H1Sample)
 
 Смотрим результат:![](/Development/CheckEncapsulation/4.jpg)Теперь все ок.
 
-Результат доступен в [репозитории](https://github.com/maksimyurkov/h1-sample).
+Созданная компонента доступна по [ссылке](https://github.com/maksimyurkov/h1-sample).
 
 ## Выводы
 
