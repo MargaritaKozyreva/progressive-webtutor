@@ -206,32 +206,70 @@ customElements.define('h1-sample', H1Sample)
 
 Смотрим результат:![](/Development/CheckEncapsulation/3.jpg)На первый взгляд вроде все заработало как надо, но нет. Нижний текст не должен быть подчеркнут. Стили внутри веб-компоненты не выходят наружу, тут все ок. А вот внешние стили попадают внутрь веб-компоненты и воздействуют на них. Так происходит потому, что у полифилла ShadyCSS есть ограничение и стили находящиеся на уровне документа попадают в веб-компоненты. \(подробнее [тут](https://github.com/webcomponents/shadycss#document-level-styling-is-not-scoped-by-default)\)
 
-Данная проблема касается не только IE11, а всех браузеров в которых пока не осуществлена поддержка Shadow DOM. \(на данный момент это Firefox, Edge\)
-
 В принципе даже такой вариант с частичной инкапсуляцией уже неплох и позволяет делать внутри своей веб-компоненты все, что угодно с CSS, не боясь, что это будет воздействовать на окружение, но хочется, чтобы никакие стили снаружи не попадали в веб-компоненту.
 
-В результате поиска было найдено 4 варианта.
+Данная проблема касается не только IE11, а всех браузеров в которых пока не осуществлена поддержка Shadow DOM. \(на данный момент это Firefox, Edge\)
+
+В результате поиска было найдено 4 варианта. \(делать пока ничего не надо, просто смотрим\)
 
 1\) [CustomStyleInterface](https://github.com/webcomponents/shadycss#about-customstyleinterface)
 
-Этот вариант со страницы полифилла [ShadyCSS](https://www.gitbook.com/book/maksimyurkov/progressive-webtutor/edit#). После строки загрузки скрипта с полифиллами 
+Этот вариант со страницы полифилла [ShadyCSS](https://www.gitbook.com/book/maksimyurkov/progressive-webtutor/edit#)
+
+* добавляем тегу &lt;style&gt;, id или класс
+* после полифиллов webcomponents-lite.js, добавляем custom-style-interface.min.js \(добавляет CustomStyleInterface в ShadyCSS\)
+* затем выбираем наш &lt;style&gt; тег и обрабатываем с помощью ShadyCSS.CustomStyleInterface.addCustomStyle
 
 ```html
+<style class="document-style">
+    h1 {
+        text-decoration: underline;
+    }
+</style>
 <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-lite.js"></script>
-```
-
-добавляем такой код
-
-```html
-
+<script src="node_modules/@webcomponents/shadycss/custom-style-interface.min.js"></script>
 <script>
-window.ShadyCSS.CustomStyleInterface.addCustomStyle(document.querySelectorAll('style')[0])
+ShadyCSS.CustomStyleInterface.addCustomStyle(document.querySelector('.document-style'))
 </script>
 ```
 
+2\) [&lt;custom-style&gt;](https://github.com/webcomponents/shadycss#about-customstyleinterface)
 
+Этот вариант тоже со страницы полифилла [ShadyCSS](https://www.gitbook.com/book/maksimyurkov/progressive-webtutor/edit#)
 
+* &lt;style&gt; переносим в &lt;custom-style&gt;
+* после полифиллов webcomponents-lite.js, добавляем custom-style-interface.min.js \(добавляет CustomStyleInterface в ShadyCSS
+* регистрируем custom-style елемент \(+ для IE11 код регистрации надо прогнать через Babel\)
 
+```html
+<custom-style>
+    <style>
+        h1 {
+            text-decoration: underline;
+        }
+    </style>
+</custom-style>
+<script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-lite.js"></script>
+<script src="node_modules/@webcomponents/shadycss/custom-style-interface.min.js"></script>
+<script>
+class CustomStyle extends HTMLElement {
+  constructor() {
+    super()
+    ShadyCSS.CustomStyleInterface.addCustomStyle(this)
+  }
+  getStyle() {
+    return this.querySelector('style')
+  }
+}
+customElements.define('custom-style', CustomStyle)
+</script>
+```
+
+---
+
+При реализации одного из этих вариантов, стили действительно становятся инкапсулированы, как-будто они в Shadow DOM. То есть внешние стили перестают попадать в веб-компоненту h1-sample, а стили внутри h1-sample не выходят наружу. Но не все так радужно. Эти два варианта имеют право на жизнь, только при определенных условиях. 
+
+* все стили должны находится в тегах &lt;style&gt;  \(то есть нельзя подключить стили через тег &lt;link rel="stylesheet"&gt;\)
 
 
 
