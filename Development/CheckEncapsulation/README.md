@@ -208,7 +208,26 @@ customElements.define('h1-sample', H1Sample)
 
 Данная проблема касается не только IE11, а всех браузеров в которых пока не осуществлена поддержка Shadow DOM. \(на данный момент это Firefox, Edge\)
 
-Впринципе даже такой вариант с частичной инкапсуляцией уже неплох и позволяет делать внутри своей веб-компоненты все, что угодно с CSS, не боясь, что это будет воздействовать на окружение, но хочется, чтобы никакие стили снаружи не попадали в веб-компоненту.
+В принципе даже такой вариант с частичной инкапсуляцией уже неплох и позволяет делать внутри своей веб-компоненты все, что угодно с CSS, не боясь, что это будет воздействовать на окружение, но хочется, чтобы никакие стили снаружи не попадали в веб-компоненту.
+
+В результате поиска было найдено 4 варианта.
+
+1\) [CustomStyleInterface](https://github.com/webcomponents/shadycss#about-customstyleinterface)
+
+Этот вариант со страницы полифилла [ShadyCSS](https://www.gitbook.com/book/maksimyurkov/progressive-webtutor/edit#). После строки загрузки скрипта с полифиллами 
+
+```html
+<script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-lite.js"></script>
+```
+
+добавляем такой код
+
+```html
+
+<script>
+window.ShadyCSS.CustomStyleInterface.addCustomStyle(document.querySelectorAll('style')[0])
+</script>
+```
 
 
 
@@ -221,14 +240,6 @@ cleanslate
 iframe
 
 custom-style
-
-
-
-
-
-
-
-
 
 В интернете готового решения данной проблемы найти не удалось.\(если кто знает напишите мне\)
 
