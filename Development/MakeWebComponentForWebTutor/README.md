@@ -18,6 +18,8 @@
 
 Данная веб-компонента подгружает список сотрудников, после этого, когда вы начинаете вводить в поле часть ФИО сотрудника, после ввода более 3-х символов осуществляется поиск и выводится список найденных сотрудников.
 
+##### Устанавливаем веб-компоненты
+
 Открываем командную строку и пишем \(после каждой строки жмем Enter\):
 
 `cd C:\Program Files\WebSoft\WebTutorServer\wt\web`
@@ -41,4 +43,40 @@
 `cd h1-sample`
 
 `npm install`
+
+##### Добавляем веб-компоненты на страницу WebTutor
+
+В WebTutor Administrator в разделе `Дизайнер` - `Шаблоны документов`, создаем произвольный шаблон с таким содержимым:
+
+```html
+<style>
+employees-sample, h1-sample {
+	margin-top: 32px;
+}
+</style>
+
+<!--Подгружаем полифиллы-->
+<script src="/components/employees-sample/node_modules/@webcomponents/webcomponentsjs/webcomponents-lite.js"></script>
+<link rel="stylesheet" href="/components/employees-sample/node_modules/cleanslate/cleanslate.css">
+
+<!--Добавляем employees-sample-->
+<script type="module" src="/components/employees-sample/employees-sample-es6.js"></script>
+<script nomodule src="/components/employees-sample/employees-sample-es5.js"></script>
+<employees-sample api-url="/components/employees-sample/webtutor-api.html" default-avatar-url="/components/employees-sample/default-avatar.jpg"></employees-sample>
+
+<!--Добавляем h1-sample-->
+<script type="module" src="/components/h1-sample/h1-sample.js"></script>
+<script nomodule src="/components/h1-sample/h1-sample-compiled.js"></script>
+<h1-sample>Привет! Я веб-компонента!</h1-sample>
+```
+
+Затем в `Дизайнер` - `Элементы шаблонов`, создаем шаблон и прикрепляем к нему шаблон созданный выше.  
+![](/assets/2.jpg)Смотрим результат  
+![](/assets/3.jpg)Если в будущем, в другой системе, к примеру Moodle, понадобится функционал employees-sample, то будет достаточно создать один серверный файл, к примеру moodle-api.php и в атрибутах веб-компоненты прописать путь до этого файла.
+
+```html
+<employees-sample api-url="/components/employees-sample/moodle-api.php" default-avatar-url="/components/employees-sample/default-avatar.jpg"></employees-sample>
+```
+
+После этого веб-компонента будет работать и выглядеть в Moodle, также как и в WebTutor.
 
