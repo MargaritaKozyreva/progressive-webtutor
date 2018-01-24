@@ -51,7 +51,7 @@
 ```html
 <style>
 employees-sample, h1-sample {
-	margin-top: 32px;
+    margin-top: 32px;
 }
 </style>
 
@@ -71,8 +71,8 @@ employees-sample, h1-sample {
 ```
 
 Затем в `Дизайнер` - `Элементы шаблонов`, создаем шаблон и прикрепляем к нему шаблон созданный выше.  
-![](/assets/2.jpg)Смотрим результат  
-![](/assets/3.jpg)Если в будущем, в другой системе, к примеру Moodle, понадобится функционал employees-sample, то будет достаточно создать один серверный файл, к примеру moodle-api.php и в атрибутах веб-компоненты прописать путь до этого файла.
+![](/Development/MakeWebComponentForWebTutor/2.jpg)Смотрим результат  
+![](/Development/MakeWebComponentForWebTutor/3.jpg)Если в будущем, в другой системе, к примеру Moodle, понадобится функционал employees-sample, то будет достаточно создать один серверный файл, к примеру moodle-api.php и в атрибутах веб-компоненты прописать путь до этого файла.
 
 ```html
 <employees-sample api-url="/components/employees-sample/moodle-api.php" default-avatar-url="/components/employees-sample/default-avatar.jpg"></employees-sample>
